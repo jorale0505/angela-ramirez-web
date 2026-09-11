@@ -3,7 +3,7 @@
 > **Contadora Pública · Especialista en Revisoría Fiscal y Auditoría Forense**  
 > *Slogan:* **"Tu información, en buenas manos"**  
 > *Cobertura Estratégica:* **Eje Cafetero y Norte del Valle** (Colombia)  
-> 🌐 **Sitio Oficial en Vivo:** [https://jorale0505.github.io/angela-ramirez-web/](https://jorale0505.github.io/angela-ramirez-web/)
+> 🌐 **Sitio Oficial en Vivo:** [https://angelaramirezcontadora.com/](https://angelaramirezcontadora.com/)
 
 Este repositorio contiene la plataforma web oficial de la firma de **Angela Ramírez**, diseñada bajo estándares editoriales de alto impacto y construida con **Astro** en modo de generación estática para máximo rendimiento (100 en Google Lighthouse), total seguridad y despliegue automatizado en **GitHub Pages**.
 
@@ -107,9 +107,7 @@ Conjunto de recursos prácticos descargables formulados para empresarios, contad
 
 El sitio cuenta con integración y despliegue continuo automatizado mediante **GitHub Actions** en `.github/workflows/deploy.yml`:
 
-- **Repositorio Oficial**: `jorale0505/angela-ramirez-web`
-- **Flujo de Trabajo**: Al realizar cualquier `git push` a la rama `main`, GitHub Actions compila automáticamente el sitio con Node.js 22 y Astro, y publica los artefactos en GitHub Pages.
-- **Configuración Dinámica de Rutas**: `astro.config.mjs` detecta automáticamente la variable `GITHUB_REPOSITORY` para ajustar de forma transparente el `site` y el `base` (`/angela-ramirez-web/`) en producción, manteniendo `/` en desarrollo local.
+- **Dominio Propio**: Configurado con `angelaramirezcontadora.com` apuntando a GitHub Pages vía DNS Hostinger.
 - **URL Oficial en Producción**:  
-  👉 **[https://jorale0505.github.io/angela-ramirez-web/](https://jorale0505.github.io/angela-ramirez-web/)**
+  👉 **[https://angelaramirezcontadora.com/](https://angelaramirezcontadora.com/)**
 
