@@ -7,7 +7,7 @@ const ghOwner = ghRepo ? ghRepo.split('/')[0] : '';
 const ghProject = ghRepo ? ghRepo.split('/')[1] : '';
 
 const site = process.env.ASTRO_SITE || (ghOwner ? `https://${ghOwner}.github.io` : 'https://angelaramirez.github.io');
-const base = process.env.BASE_PATH || (ghProject && !ghProject.endsWith('.github.io') ? `/${ghProject}` : undefined);
+const base = process.env.BASE_PATH || (ghProject && !ghProject.endsWith('.github.io') ? `/${ghProject}/` : undefined);
 
 // https://astro.build/config
 export default defineConfig({

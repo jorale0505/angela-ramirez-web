@@ -29,7 +29,8 @@ const iconSize = iconSizes[size] || iconSizes.md;
 const isLight = theme === 'light';
 const primaryColor = isLight ? '#FFFFFF' : '#163A5F';
 const secondaryColor = isLight ? '#DFCA8D' : '#B89B5E';
-const sloganColor = isLight ? '#9BB0C1' : '#71879A';
+const rawBase = import.meta.env.BASE_URL;
+const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/';
 ---
 
 <div class={`brand-logo-wrapper ${variant} ${theme} size-${size} ${className}`}>
@@ -37,7 +38,7 @@ const sloganColor = isLight ? '#9BB0C1' : '#71879A';
   {renderMode === '3d' ? (
     <div class={`logo-3d-container size-${size} ${theme}`}>
       <img 
-        src={`${import.meta.env.BASE_URL}logo-ar-3d.png`} 
+        src={`${baseUrl}logo-ar-3d.png`} 
         alt="Isotipo Oficial Angela Ramírez · Monograma AR 3D con Barras Doradas" 
         width={iconSize.width}
         height={iconSize.height}

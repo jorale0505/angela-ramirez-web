@@ -1,5 +1,8 @@
 ---
 import { siteConfig } from '../data/content';
+
+const rawBase = import.meta.env.BASE_URL;
+const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/';
 ---
 
 <section id="sobre-mi" class="about-section scroll-reveal-section">
@@ -29,7 +32,7 @@ import { siteConfig } from '../data/content';
           <div class="profile-photo-wrapper">
             <div class="photo-glow-aura" aria-hidden="true"></div>
             <img 
-              src={`${import.meta.env.BASE_URL}angela-portrait.png`} 
+              src={`${baseUrl}angela-portrait.png`} 
               alt="Angela María Ramírez Bedoya - Contadora Pública" 
               class="profile-photo-img"
               loading="lazy"
