@@ -121,6 +121,24 @@ a {
   }
 }
 
+/* Utilidades Globales de Alineación */
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 /* Botones Premium */
 .btn {
   display: inline-flex;

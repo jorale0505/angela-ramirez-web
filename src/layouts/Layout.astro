@@ -13,7 +13,7 @@ interface Props {
 const {
   title = "Angela Ramírez | Contadora Pública · Revisoría Fiscal y Auditoría Forense · Cali",
   description = "Servicios profesionales de Revisoría Fiscal, Auditoría Forense, Peritaje Contable y Planeación Tributaria en Cali y Colombia. Tu información, en buenas manos.",
-  image = "/og-image.png",
+  image = `${import.meta.env.BASE_URL}logo-ar-3d.png`,
 } = Astro.props;
 
 const siteUrl = Astro.site?.toString() || "https://angelaramirez.github.io";
@@ -80,7 +80,7 @@ const jsonLd = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
 
     <!-- SEO Primario -->
@@ -106,9 +106,10 @@ const jsonLd = {
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={`${siteUrl}${image}`} />
 
-    <!-- Preconexión de Fuentes de Google -->
+    <!-- Google Fonts Oficiales: Cormorant Garamond & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Datos Estructurados JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
