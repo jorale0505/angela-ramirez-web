@@ -1,0 +1,255 @@
+---
+import { siteConfig } from '../data/content';
+---
+
+<footer class="footer-wrap">
+  <div class="container text-center">
+    <h3 class="footer-brand-title">{siteConfig.name} · {siteConfig.title}</h3>
+    <p class="footer-slogan">{siteConfig.slogan}</p>
+    
+    <!-- Línea Dorada: 50% del ancho de pantalla animada desde los extremos hacia el centro -->
+    <div class="footer-gold-divider" aria-hidden="true">
+      <div class="footer-gold-track"></div>
+      <div class="gold-stream-left"></div>
+      <div class="gold-stream-right"></div>
+      <div class="gold-center-node"></div>
+    </div>
+
+    <!-- Ubicaciones: Eje Cafetero y Norte del Valle -->
+    <div class="footer-locations">
+      <span class="footer-loc-item">
+        <svg class="loc-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        Eje Cafetero
+      </span>
+      <span class="footer-loc-sep" aria-hidden="true">·</span>
+      <span class="footer-loc-item">
+        <svg class="loc-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        Norte del Valle
+      </span>
+    </div>
+
+    <p class="footer-copy">
+      © {new Date().getFullYear()} {siteConfig.name} · Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer-wrap {
+    position: relative;
+    z-index: 1;
+    background: #112B47;
+    color: #FFFFFF;
+    padding: 70px 0 35px;
+    border-top: 2px solid var(--color-gold-champagne, #DFCA8D);
+    overflow: hidden;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .footer-brand-title {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.01em;
+  }
+
+  .footer-slogan {
+    color: var(--color-gold-champagne, #B89B5E);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  /* Línea Dorada: 50% del ancho de pantalla animada desde los extremos hacia el centro */
+  .footer-gold-divider {
+    width: 50vw;
+    max-width: 90%;
+    margin: 1.8rem auto 1.6rem;
+    position: relative;
+    height: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-gold-track {
+    position: absolute;
+    inset: 0;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, 
+      rgba(223, 202, 141, 0.08) 0%, 
+      rgba(223, 202, 141, 0.35) 50%, 
+      rgba(223, 202, 141, 0.08) 100%
+    );
+    border-radius: 999px;
+  }
+
+  /* Haz luminoso desde el extremo izquierdo hacia el centro */
+  .gold-stream-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2.5px;
+    width: 25%;
+    background: linear-gradient(90deg, transparent, #DFCA8D 65%, #FFF9E0 100%);
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(223, 202, 141, 0.85), 0 0 18px rgba(255, 246, 214, 0.7);
+    animation: streamFromLeft 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  /* Haz luminoso desde el extremo derecho hacia el centro */
+  .gold-stream-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2.5px;
+    width: 25%;
+    background: linear-gradient(270deg, transparent, #DFCA8D 65%, #FFF9E0 100%);
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(223, 202, 141, 0.85), 0 0 18px rgba(255, 246, 214, 0.7);
+    animation: streamFromRight 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  @keyframes streamFromLeft {
+    0% {
+      left: 0%;
+      opacity: 0;
+      transform: translateY(-50%) scaleX(0.3);
+    }
+    20% {
+      opacity: 1;
+    }
+    75% {
+      left: calc(50% - 25%);
+      opacity: 1;
+      transform: translateY(-50%) scaleX(1);
+    }
+    95%, 100% {
+      left: calc(50% - 6px);
+      opacity: 0;
+      transform: translateY(-50%) scaleX(0.2);
+    }
+  }
+
+  @keyframes streamFromRight {
+    0% {
+      right: 0%;
+      opacity: 0;
+      transform: translateY(-50%) scaleX(0.3);
+    }
+    20% {
+      opacity: 1;
+    }
+    75% {
+      right: calc(50% - 25%);
+      opacity: 1;
+      transform: translateY(-50%) scaleX(1);
+    }
+    95%, 100% {
+      right: calc(50% - 6px);
+      opacity: 0;
+      transform: translateY(-50%) scaleX(0.2);
+    }
+  }
+
+  /* Nodo de colisión áureo central */
+  .gold-center-node {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #FFF9E0;
+    box-shadow: 0 0 10px #DFCA8D, 0 0 20px rgba(223, 202, 141, 0.8);
+    animation: centerPulseCollision 2.8s ease-in-out infinite;
+    z-index: 2;
+  }
+
+  @keyframes centerPulseCollision {
+    0%, 65% {
+      transform: translate(-50%, -50%) scale(0.6);
+      opacity: 0.35;
+      box-shadow: 0 0 6px rgba(223, 202, 141, 0.3);
+    }
+    85% {
+      transform: translate(-50%, -50%) scale(1.6);
+      opacity: 1;
+      box-shadow: 0 0 16px #FFF9E0, 0 0 28px rgba(223, 202, 141, 1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0.5;
+      box-shadow: 0 0 8px rgba(223, 202, 141, 0.5);
+    }
+  }
+
+  /* Ubicaciones: Cartago, Pereira, La Virginia */
+  .footer-locations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-loc-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: #DFCA8D;
+    font-family: var(--font-sans, 'Montserrat', sans-serif);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(223, 202, 141, 0.08);
+    border: 1px solid rgba(223, 202, 141, 0.28);
+    padding: 0.38rem 0.95rem;
+    border-radius: 999px;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .footer-loc-item:hover {
+    background: rgba(223, 202, 141, 0.18);
+    border-color: rgba(223, 202, 141, 0.65);
+    color: #FFF6D6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(223, 202, 141, 0.25);
+  }
+
+  .loc-pin-icon {
+    width: 14px;
+    height: 14px;
+    stroke: #DFCA8D;
+    flex-shrink: 0;
+  }
+
+  .footer-loc-sep {
+    color: rgba(223, 202, 141, 0.45);
+    font-size: 1.1rem;
+    font-weight: 700;
+    user-select: none;
+  }
+
+  .footer-copy {
+    color: #72879A;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+  }
+</style>

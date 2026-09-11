@@ -1,0 +1,269 @@
+---
+import { forensicMethodology } from '../data/content';
+---
+
+<section id="metodologia" class="forensic-section">
+  <div class="container">
+    <div class="section-header fade-up text-center">
+      <span class="badge badge-gold">RIGOR CIENTÍFICO & PROBATORIO</span>
+      <h2 class="section-title">
+        Metodología de Investigación Forense <br />
+        <span class="gold-text">& Cadena de Custodia</span>
+      </h2>
+      <div class="gold-divider-center"></div>
+      <p class="section-subtitle">
+        En situaciones de fraude, disputas entre socios o litigios judiciales, la validez de la prueba depende de su inmutabilidad. Aplicamos estándares probatorios avalados por el Código General del Proceso (Ley 1564 de 2012).
+      </p>
+    </div>
+
+    <!-- Línea de Fases Metodológicas -->
+    <div class="methodology-timeline">
+      {forensicMethodology.map((phase) => (
+        <div class="timeline-step fade-up">
+          <div class="step-indicator">
+            <div class="step-circle">
+              <span>{phase.step}</span>
+            </div>
+            <div class="step-connector"></div>
+          </div>
+
+          <div class="step-card card-premium">
+            <div class="step-header">
+              <span class="step-sub">{phase.subtitle}</span>
+              <h3 class="step-title">{phase.title}</h3>
+            </div>
+
+            <p class="step-desc">{phase.description}</p>
+
+            <div class="step-deliverable">
+              <span class="deliv-label">Entregable de Fase:</span>
+              <span class="deliv-text">{phase.deliverable}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Garantía de Confidencialidad y Secreto Profesional -->
+    <div class="confidentiality-notice fade-up">
+      <div class="confidential-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+      </div>
+      <div class="confidential-text">
+        <h4>Compromiso Inquebrantable de Secreto Profesional</h4>
+        <p>
+          Toda investigación forense o peritaje se inicia bajo la firma obligatoria de acuerdos de confidencialidad reforzada (NDA). Su información estratégica, libros de comercio y registros contables permanecen estrictamente custodiados bajo el secreto profesional consagrado en el artículo 74 de la Constitución Política y la Ley 43 de 1990.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .forensic-section {
+    padding: 90px 0;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .section-header {
+    max-width: 800px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--color-primary-dark);
+    margin-top: 0.8rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3.1rem;
+    }
+  }
+
+  .gold-text {
+    color: var(--color-gold-champagne);
+  }
+
+  .section-subtitle {
+    font-size: 1.08rem;
+    color: #556677;
+    line-height: 1.65;
+  }
+
+  /* Cronograma de Fases */
+  .methodology-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .timeline-step {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  @media (min-width: 768px) {
+    .timeline-step {
+      grid-template-columns: 70px 1fr;
+      gap: 2.2rem;
+    }
+  }
+
+  .step-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .step-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary-dark), #244C73);
+    border: 2px solid var(--color-gold-champagne);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(22, 58, 95, 0.25);
+    z-index: 2;
+  }
+
+  @media (min-width: 768px) {
+    .step-circle {
+      width: 56px;
+      height: 56px;
+      font-size: 1.3rem;
+    }
+  }
+
+  .step-connector {
+    flex: 1;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--color-gold-champagne), rgba(22, 58, 95, 0.15));
+    margin-top: 0.5rem;
+  }
+
+  .timeline-step:last-child .step-connector {
+    display: none;
+  }
+
+  .step-card {
+    padding: 2rem 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .step-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .step-sub {
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-gold-champagne);
+    text-transform: uppercase;
+  }
+
+  .step-title {
+    font-size: 1.55rem;
+    color: var(--color-primary-dark);
+  }
+
+  .step-desc {
+    font-size: 0.98rem;
+    color: #4C5D6E;
+    line-height: 1.65;
+  }
+
+  .step-deliverable {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    background-color: var(--color-bg-ivory);
+    padding: 0.8rem 1.1rem;
+    border-radius: 6px;
+    border-left: 3px solid var(--color-gold-champagne);
+    margin-top: 0.4rem;
+  }
+
+  @media (min-width: 640px) {
+    .step-deliverable {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.6rem;
+    }
+  }
+
+  .deliv-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .deliv-text {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #8E7238;
+  }
+
+  /* Aviso de Confidencialidad */
+  .confidentiality-notice {
+    max-width: 980px;
+    margin: 3.5rem auto 0;
+    background: linear-gradient(135deg, rgba(22, 58, 95, 0.03) 0%, rgba(184, 155, 94, 0.06) 100%);
+    border: 1px solid rgba(184, 155, 94, 0.3);
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.8rem;
+  }
+
+  .confidential-icon {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(184, 155, 94, 0.4);
+    border-radius: 50%;
+    padding: 0.8rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(22, 58, 95, 0.06);
+  }
+
+  .confidential-text h4 {
+    font-size: 1.25rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .confidential-text p {
+    font-size: 0.94rem;
+    color: #556677;
+    line-height: 1.6;
+  }
+</style>

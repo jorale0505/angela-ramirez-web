@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100">
+  <defs>
+    <linearGradient id="goldGradFav" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9C7F43"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="70%" stop-color="#F3E5AB"/>
+      <stop offset="100%" stop-color="#B89B5E"/>
+    </linearGradient>
+    <filter id="favShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Fondo institucional redondeado -->
+  <rect width="120" height="100" rx="20" fill="#163A5F"/>
+  
+  <g transform="translate(6, 12) scale(0.88)" filter="url(#favShadow)">
+    <!-- 3 Barras Ascendentes Doradas -->
+    <rect x="27" y="58" width="6" height="16" rx="1.5" fill="url(#goldGradFav)" />
+    <rect x="36" y="44" width="6.5" height="30" rx="1.5" fill="url(#goldGradFav)" />
+    <rect x="45.5" y="30" width="6.5" height="44" rx="1.5" fill="url(#goldGradFav)" />
+
+    <!-- Trazo Izquierdo de la A (Blanco Marfil) -->
+    <path d="M 43 8 L 8 74 C 7 76 5 77 3 77 L 2 77 L 2 74 C 5 73 7 70 9 66 L 39 12 Z" fill="#F7F6F2"/>
+
+    <!-- Trazo Derecho Superior de la A (Blanco Marfil) -->
+    <path d="M 41 8 L 47 8 L 62 37 L 50 37 Z" fill="#F7F6F2"/>
+
+    <!-- Pata Diagonal Dorada de la A -->
+    <path d="M 50 37 L 62 37 L 85 77 L 70 77 Z" fill="url(#goldGradFav)"/>
+
+    <!-- Bucle Superior y Curva de la R (Blanco Marfil) -->
+    <path d="M 55 38 H 85 C 98 38 106 46 106 56 C 106 66 98 72 86 72 H 68 Z" fill="#F7F6F2"/>
+    
+    <!-- Pata Curva Fluida de la R (Blanco Marfil) -->
+    <path d="M 76 52 C 84 54 94 64 105 76 C 111 83 116 85 122 85 L 121 80 C 115 80 110 76 102 64 C 94 52 84 49 74 49 Z" fill="#F7F6F2"/>
+  </g>
+</svg>

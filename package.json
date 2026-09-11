@@ -1,0 +1,15 @@
+{
+  "name": "angela-ramirez-web",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Sitio web profesional de Angela Ramírez - Contadora Pública, Especialista en Revisoría Fiscal y Auditoría Forense",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "astro": "ASTRO_TELEMETRY_DISABLED=1 astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.2"
+  }
+}

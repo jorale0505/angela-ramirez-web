@@ -1,0 +1,238 @@
+---
+import { testimonials } from '../data/content';
+---
+
+<section class="trust-section">
+  <div class="container">
+    <!-- Encabezado de Testimonios -->
+    <div class="section-header fade-up text-center">
+      <span class="badge badge-gold">EXPERIENCIA COMPROBADA</span>
+      <h2 class="section-title">
+        La Confianza de Juntas Directivas <br />
+        <span class="gold-text">& Firmas Legales en el Valle</span>
+      </h2>
+      <div class="gold-divider-center"></div>
+      <p class="section-subtitle">
+        Empresas y despachos jurídicos respaldan la solvencia técnica, objetividad y rigor con que defendemos su estabilidad financiera.
+      </p>
+    </div>
+
+    <!-- Carrusel / Rejilla de Testimonios -->
+    <div class="testimonials-grid fade-up">
+      {testimonials.map((item) => (
+        <div class="testimonial-card card-premium">
+          <div class="testi-badge-row">
+            <span class="badge">{item.serviceCategory}</span>
+            <div class="stars">★★★★★</div>
+          </div>
+
+          <p class="testi-quote">"{item.quote}"</p>
+
+          <div class="testi-footer">
+            <div class="testi-author-avatar">
+              <span>{item.author.split(' ').map(n => n[0]).slice(0, 2).join('')}</span>
+            </div>
+            <div class="testi-author-info">
+              <h4 class="testi-name">{item.author}</h4>
+              <p class="testi-role">{item.role}</p>
+              <p class="testi-org">{item.organization} · <span class="testi-city">{item.city}</span></p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Banner Institucional Oscuro de Fe Pública -->
+    <div class="trust-banner-dark fade-up">
+      <div class="banner-content">
+        <div class="banner-badge">GARANTÍA DE FE PÚBLICA</div>
+        <h3 class="banner-title">
+          "El Contador Público ejerce una función social y de orden público."
+        </h3>
+        <p class="banner-desc">
+          La firma y dictamen de Angela Ramírez están amparados bajo la fe pública concedida por el Estado Colombiano (Ley 43 de 1990). Esto otorga presunción legal de veracidad a los estados financieros y pruebas periciales que suscribimos.
+        </p>
+      </div>
+      <div class="banner-action">
+        <a href="#contacto" class="btn btn-gold">
+          Agendar Consulta Ética & Confidencial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trust-section {
+    padding: 90px 0;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .section-header {
+    max-width: 800px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--color-primary-dark);
+    margin-top: 0.8rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3.1rem;
+    }
+  }
+
+  .gold-text {
+    color: var(--color-gold-champagne);
+  }
+
+  .section-subtitle {
+    font-size: 1.08rem;
+    color: #556677;
+    line-height: 1.65;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .testimonial-card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .testi-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stars {
+    color: var(--color-gold-champagne);
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+  }
+
+  .testi-quote {
+    font-size: 0.98rem;
+    color: #3F5060;
+    line-height: 1.7;
+    font-style: italic;
+    flex: 1;
+  }
+
+  .testi-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(22, 58, 95, 0.08);
+    padding-top: 1.2rem;
+  }
+
+  .testi-author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary-dark), #264A70);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1.5px solid var(--color-gold-champagne);
+    flex-shrink: 0;
+  }
+
+  .testi-name {
+    font-size: 1rem;
+    color: var(--color-primary-dark);
+  }
+
+  .testi-role {
+    font-size: 0.8rem;
+    color: var(--color-gold-champagne);
+    font-weight: 600;
+  }
+
+  .testi-org {
+    font-size: 0.75rem;
+    color: #71879A;
+  }
+
+  .testi-city {
+    font-weight: 600;
+  }
+
+  /* Banner Oscuro Institucional */
+  .trust-banner-dark {
+    margin-top: 4.5rem;
+    background: linear-gradient(135deg, #163A5F 0%, #0D243B 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(184, 155, 94, 0.4);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(22, 58, 95, 0.18);
+  }
+
+  @media (min-width: 992px) {
+    .trust-banner-dark {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 3.5rem 4rem;
+    }
+  }
+
+  .banner-content {
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .banner-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    color: var(--color-gold-champagne);
+    text-transform: uppercase;
+  }
+
+  .banner-title {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    line-height: 1.3;
+  }
+
+  .banner-desc {
+    font-size: 0.95rem;
+    color: #C0D0DF;
+    line-height: 1.65;
+  }
+</style>

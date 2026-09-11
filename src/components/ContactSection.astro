@@ -1,0 +1,462 @@
+---
+import BrandLogo from './BrandLogo.astro';
+import { siteConfig } from '../data/content';
+---
+
+<section id="contacto" class="contact-section">
+  <div class="container">
+    <div class="section-header fade-up text-center">
+      <span class="badge badge-gold">CANAL DIRECTO & CONFIDENCIAL</span>
+      <h2 class="section-title">
+        Iniciemos una Conversación <br />
+        <span class="gold-text">Estratégica para su Empresa</span>
+      </h2>
+      <div class="gold-divider-center"></div>
+      <p class="section-subtitle">
+        Agende una sesión preliminar de diagnóstico sin costo. Analizaremos las necesidades de revisoría, auditoría o peritaje de su organización bajo estricta confidencialidad.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Columna Izquierda: Tarjeta de Presentación Ejecutiva (Recreación de la Identidad Visual) -->
+      <div class="card-visual-col fade-up">
+        <div class="business-card-wrap">
+          <!-- Frente de la Tarjeta (Azul Ejecutivo + Oro) -->
+          <div class="biz-card biz-card-front">
+            <div class="biz-gold-accent"></div>
+            <div class="biz-card-top">
+              <BrandLogo variant="monogram" theme="light" size="md" />
+              <span class="biz-chip">CONFIDENCIAL</span>
+            </div>
+            
+            <div class="biz-card-middle">
+              <h3 class="biz-name">Angela Ramírez</h3>
+              <p class="biz-title">CONTADORA PÚBLICA</p>
+              <p class="biz-spec">Especialista en Revisoría Fiscal & Auditoría Forense</p>
+            </div>
+
+            <div class="biz-card-bottom">
+              <div class="biz-contact-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>{siteConfig.phone}</span>
+              </div>
+              <div class="biz-contact-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>{siteConfig.secondaryEmail}</span>
+              </div>
+              <div class="biz-contact-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>{siteConfig.location}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enlaces Rápidos de Contacto -->
+        <div class="quick-contact-pills">
+          <a href={siteConfig.whatsappUrl} target="_blank" rel="noopener noreferrer" class="contact-pill wa-pill">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+            </svg>
+            <div>
+              <span class="pill-label">Atención Inmediata</span>
+              <span class="pill-value">WhatsApp Corporativo</span>
+            </div>
+          </a>
+
+          <a href={`mailto:${siteConfig.email}`} class="contact-pill email-pill">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div>
+              <span class="pill-label">Correo Oficial</span>
+              <span class="pill-value">{siteConfig.email}</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Formulario de Solicitud Confidencial -->
+      <div class="form-col fade-up">
+        <div class="form-card card-premium">
+          <h3 class="form-card-title">Solicitar Diagnóstico o Propuesta</h3>
+          <p class="form-card-desc">Complete los campos y coordinaremos una reunión directiva en Cali o virtual.</p>
+
+          <form id="contact-form" class="direct-contact-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="c-name" class="field-label">Nombre y Apellidos *</label>
+                <input type="text" id="c-name" name="name" class="field-input" placeholder="Ej: Dra. María Gómez" required />
+              </div>
+              <div class="form-field">
+                <label for="c-company" class="field-label">Empresa o Entidad</label>
+                <input type="text" id="c-company" name="company" class="field-input" placeholder="Ej: Inversiones del Valle S.A.S." />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="c-phone" class="field-label">Teléfono / WhatsApp *</label>
+                <input type="tel" id="c-phone" name="phone" class="field-input" placeholder="+57 300 000 0000" required />
+              </div>
+              <div class="form-field">
+                <label for="c-email" class="field-label">Correo Corporativo *</label>
+                <input type="email" id="c-email" name="email" class="field-input" placeholder="gerencia@empresa.com" required />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="c-service" class="field-label">Servicio Requerido *</label>
+              <select id="c-service" name="service" class="field-select" required>
+                <option value="Revisoría Fiscal Integral">Revisoría Fiscal Integral (Obligatoria o Voluntaria)</option>
+                <option value="Auditoría Forense">Auditoría Forense & Detección de Fraude</option>
+                <option value="Peritaje Contable Judicial">Peritaje Contable Judicial (Dictamen para Proceso Legal)</option>
+                <option value="Planeación Tributaria DIAN">Planeación Tributaria & Cumplimiento Fiscal DIAN/Cali</option>
+                <option value="Outsourcing Contable NIIF">Outsourcing Contable & Estados Financieros NIIF</option>
+                <option value="Otro">Otro Asunto Estratégico</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="c-message" class="field-label">Breve Resumen de su Necesidad (Confidencial)</label>
+              <textarea id="c-message" name="message" rows="3" class="field-textarea" placeholder="Describa brevemente el contexto de su empresa, sector o el requerimiento específico..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-full">
+              <span>Enviar Consulta Confidencial vía WhatsApp</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+
+            <p class="privacy-note">
+              🔒 <em>Protección de Datos: Su información está resguardada bajo la Ley 1581 de 2012 y el Secreto Profesional Contable (Ley 43 de 1990). Jamás será compartida con terceros.</em>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    padding: 90px 0;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .section-header {
+    max-width: 800px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--color-primary-dark);
+    margin-top: 0.8rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 3.1rem;
+    }
+  }
+
+  .gold-text {
+    color: var(--color-gold-champagne);
+  }
+
+  .section-subtitle {
+    font-size: 1.08rem;
+    color: #556677;
+    line-height: 1.65;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  @media (min-width: 992px) {
+    .contact-grid {
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 4rem;
+    }
+  }
+
+  /* Tarjeta de Presentación */
+  .business-card-wrap {
+    perspective: 1000px;
+  }
+
+  .biz-card {
+    background: linear-gradient(135deg, #163A5F 0%, #0D263F 100%);
+    border: 1px solid rgba(184, 155, 94, 0.45);
+    border-radius: 12px;
+    padding: 2.6rem 2.2rem;
+    color: #FFFFFF;
+    box-shadow: 0 20px 50px rgba(22, 58, 95, 0.18), 0 0 30px rgba(184, 155, 94, 0.15);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .biz-card:hover {
+    transform: translateY(-4px) rotateX(2deg);
+    box-shadow: 0 28px 60px rgba(22, 58, 95, 0.25), 0 0 40px rgba(184, 155, 94, 0.25);
+  }
+
+  .biz-gold-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(90deg, #DFCA8D, #B89B5E);
+  }
+
+  .biz-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .biz-chip {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #DFCA8D;
+    border: 1px solid rgba(184, 155, 94, 0.4);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  .biz-name {
+    font-size: 2.1rem;
+    color: #F7F6F2;
+    margin-bottom: 0.2rem;
+  }
+
+  .biz-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--color-gold-champagne);
+  }
+
+  .biz-spec {
+    font-size: 0.85rem;
+    color: #B2C5D6;
+    margin-top: 0.25rem;
+  }
+
+  .biz-card-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1.2rem;
+  }
+
+  .biz-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.88rem;
+    color: #D3E0EA;
+  }
+
+  .biz-contact-item svg {
+    color: var(--color-gold-champagne);
+    flex-shrink: 0;
+  }
+
+  /* Píldoras de Contacto Rápido */
+  .quick-contact-pills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .contact-pill {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.4rem;
+    background: #FFFFFF;
+    border: 1px solid rgba(22, 58, 95, 0.08);
+    border-radius: 8px;
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.2s ease;
+  }
+
+  .contact-pill:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+    border-color: var(--color-gold-champagne);
+  }
+
+  .wa-pill svg {
+    color: #25D366;
+    flex-shrink: 0;
+  }
+
+  .email-pill svg {
+    color: var(--color-primary-dark);
+    flex-shrink: 0;
+  }
+
+  .pill-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #71879A;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .pill-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+  }
+
+  /* Formulario */
+  .form-card {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .form-card {
+      padding: 3rem;
+    }
+  }
+
+  .form-card-title {
+    font-size: 1.8rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.4rem;
+  }
+
+  .form-card-desc {
+    font-size: 0.95rem;
+    color: #556677;
+    margin-bottom: 1.8rem;
+  }
+
+  .direct-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  @media (min-width: 640px) {
+    .form-row {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .field-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .field-input, .field-select, .field-textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--color-text-graphite);
+    background-color: #FAFAF8;
+    border: 1px solid rgba(22, 58, 95, 0.12);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+
+  .field-input:focus, .field-select:focus, .field-textarea:focus {
+    outline: none;
+    border-color: var(--color-gold-champagne);
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(184, 155, 94, 0.15);
+  }
+
+  .privacy-note {
+    font-size: 0.76rem;
+    color: #71879A;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+  }
+</style>
+
+<script>
+  function setupContactForm() {
+    const form = document.getElementById('contact-form') as HTMLFormElement | null;
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = (document.getElementById('c-name') as HTMLInputElement)?.value || '';
+      const company = (document.getElementById('c-company') as HTMLInputElement)?.value || 'Particular';
+      const phone = (document.getElementById('c-phone') as HTMLInputElement)?.value || '';
+      const email = (document.getElementById('c-email') as HTMLInputElement)?.value || '';
+      const service = (document.getElementById('c-service') as HTMLSelectElement)?.value || '';
+      const message = (document.getElementById('c-message') as HTMLTextAreaElement)?.value || '';
+
+      const text = `*Solicitud de Consulta - Angela Ramírez Contadora*%0A` +
+        `👤 *Nombre:* ${encodeURIComponent(name)}%0A` +
+        `🏢 *Empresa:* ${encodeURIComponent(company)}%0A` +
+        `📱 *Teléfono:* ${encodeURIComponent(phone)}%0A` +
+        `✉️ *Correo:* ${encodeURIComponent(email)}%0A` +
+        `💼 *Servicio de Interés:* ${encodeURIComponent(service)}%0A` +
+        `📝 *Mensaje:* ${encodeURIComponent(message)}`;
+
+      // Redirigir a WhatsApp
+      const waUrl = `https://wa.me/573001234567?text=${text}`;
+      window.open(waUrl, '_blank');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupContactForm);
+  } else {
+    setupContactForm();
+  }
+</script>

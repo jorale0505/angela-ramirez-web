@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import FreeResources from '../components/FreeResources.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Angela Ramírez | Contadora Pública · Revisoría Fiscal y Auditoría Forense · Cali, Colombia"
+  description="Servicios profesionales de Revisoría Fiscal Integral, Auditoría Forense, Peritaje Contable Judicial y Planeación Tributaria en Cali. Tu información, en buenas manos."
+>
+  <Header />
+  
+  <main id="main-content">
+    <Hero />
+    <About />
+    <Services />
+    <FreeResources />
+  </main>
+
+  <Footer />
+</Layout>

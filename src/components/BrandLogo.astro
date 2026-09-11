@@ -1,0 +1,253 @@
+---
+interface Props {
+  variant?: 'full' | 'monogram' | 'horizontal';
+  theme?: 'dark' | 'light';
+  showSlogan?: boolean;
+  class?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  renderMode?: '3d' | 'vector';
+}
+
+const {
+  variant = 'horizontal',
+  theme = 'dark',
+  showSlogan = false,
+  class: className = '',
+  size = 'md',
+  renderMode = '3d',
+} = Astro.props;
+
+// Dimensiones según tamaño para el icono / render 3D
+const iconSizes = {
+  sm: { width: 44, height: 32 },
+  md: { width: 56, height: 40 },
+  lg: { width: 110, height: 78 },
+  xl: { width: 160, height: 112 },
+};
+
+const iconSize = iconSizes[size] || iconSizes.md;
+const isLight = theme === 'light';
+const primaryColor = isLight ? '#FFFFFF' : '#163A5F';
+const secondaryColor = isLight ? '#DFCA8D' : '#B89B5E';
+const sloganColor = isLight ? '#9BB0C1' : '#71879A';
+---
+
+<div class={`brand-logo-wrapper ${variant} ${theme} size-${size} ${className}`}>
+  <!-- Logo 3D Oficial de Alta Definición o Vector SVG -->
+  {renderMode === '3d' ? (
+    <div class={`logo-3d-container size-${size} ${theme}`}>
+      <img 
+        src="/logo-ar-3d.png" 
+        alt="Isotipo Oficial Angela Ramírez · Monograma AR 3D con Barras Doradas" 
+        width={iconSize.width}
+        height={iconSize.height}
+        class="logo-3d-img"
+        loading="eager"
+      />
+    </div>
+  ) : (
+    <svg 
+      class="brand-icon"
+      viewBox="0 0 120 85" 
+      width={iconSize.width} 
+      height={iconSize.height}
+      aria-label="Monograma Vectorial Angela Ramírez"
+    >
+      <defs>
+        <linearGradient id={`goldGrad-${theme}-${size}`} x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#9C7F43"/>
+          <stop offset="35%" stop-color="#D4AF37"/>
+          <stop offset="70%" stop-color="#F3E5AB"/>
+          <stop offset="100%" stop-color="#B89B5E"/>
+        </linearGradient>
+        <filter id="subtleDropShadow" x="-10%" y="-10%" width="120%" height="120%">
+          <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+        </filter>
+      </defs>
+
+      <!-- Grupo Monograma AR Oficial -->
+      <g filter="url(#subtleDropShadow)">
+        <!-- 3 Barras Ascendentes Doradas con efecto 3D -->
+        <!-- Barra 1 (corta) -->
+        <rect x="27" y="62" width="6" height="15" rx="1" fill={`url(#goldGrad-${theme}-${size})`} />
+        <!-- Barra 2 (media) -->
+        <rect x="36" y="50" width="6.5" height="27" rx="1" fill={`url(#goldGrad-${theme}-${size})`} />
+        <!-- Barra 3 (alta) -->
+        <rect x="45.5" y="38" width="6.5" height="39" rx="1" fill={`url(#goldGrad-${theme}-${size})`} />
+
+        <!-- Trazo Izquierdo de la A (Azul Ejecutivo con pie serifado) -->
+        <path d="M 43 8 L 8 74 C 7 76 5 77 3 77 L 2 77 L 2 74 C 5 73 7 70 9 66 L 39 12 Z" fill={primaryColor}/>
+
+        <!-- Trazo Derecho Superior de la A (Azul Ejecutivo) -->
+        <path d="M 41 8 L 47 8 L 62 37 L 50 37 Z" fill={primaryColor}/>
+
+        <!-- Pata Diagonal Dorada de la A (Oro Champagne) -->
+        <path d="M 50 37 L 62 37 L 85 77 L 70 77 Z" fill={`url(#goldGrad-${theme}-${size})`}/>
+
+        <!-- Bucle Superior y Curva de la R (Azul Ejecutivo) -->
+        <path d="M 55 38 H 85 C 98 38 106 46 106 58 C 106 68 98 74 86 74 H 68 Z" fill={primaryColor}/>
+        
+        <!-- Pata Curva Fluida de la R (Azul Ejecutivo con remate extendido) -->
+        <path d="M 76 54 C 84 56 94 66 105 78 C 111 85 116 87 122 87 L 121 82 C 115 82 110 78 102 66 C 94 54 84 51 74 51 Z" fill={primaryColor}/>
+      </g>
+    </svg>
+  )}
+
+  {variant !== 'monogram' && (
+    <div class="brand-text-container">
+      <div class="brand-name" style={`color: ${primaryColor};`}>
+        ANGELA RAMÍREZ
+      </div>
+      
+      <div class="brand-subtitle-row">
+        <span class="line-decor" style={`background-color: ${secondaryColor};`}></span>
+        <span class="brand-subtitle" style={`color: ${secondaryColor};`}>
+          CONTADORA PÚBLICA
+        </span>
+        <span class="line-decor" style={`background-color: ${secondaryColor};`}></span>
+      </div>
+
+      {showSlogan && (
+        <div class="brand-slogan" style={`color: ${sloganColor};`}>
+          TU INFORMACIÓN, EN BUENAS MANOS
+        </div>
+      )}
+    </div>
+  )}
+</div>
+
+<style>
+  .brand-logo-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.95rem;
+    text-decoration: none;
+    user-select: none;
+  }
+
+  .brand-logo-wrapper.full {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.85rem;
+  }
+
+  .brand-logo-wrapper.horizontal {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Contenedor del Logo 3D */
+  .logo-3d-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+  }
+
+  .logo-3d-img {
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 4px 12px rgba(22, 58, 95, 0.12));
+  }
+
+  /* Ajuste en modo claro/oscuro para realzar los bordes sobre fondos oscuros */
+  .logo-3d-container.light .logo-3d-img {
+    filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.85)) drop-shadow(0 6px 18px rgba(0, 0, 0, 0.35));
+  }
+
+  .brand-logo-wrapper:hover .logo-3d-container {
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  .brand-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .brand-logo-wrapper:hover .brand-icon {
+    transform: scale(1.05);
+  }
+
+  .brand-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .brand-name {
+    font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.1;
+    font-size: 1.18rem;
+    text-transform: uppercase;
+  }
+
+  .size-xl .brand-name {
+    font-size: 2.3rem;
+    letter-spacing: 0.18em;
+  }
+
+  .size-lg .brand-name {
+    font-size: 1.85rem;
+    letter-spacing: 0.18em;
+  }
+
+  .size-sm .brand-name {
+    font-size: 0.98rem;
+    letter-spacing: 0.14em;
+  }
+
+  .brand-subtitle-row {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .brand-logo-wrapper.full .brand-subtitle-row {
+    justify-content: center;
+  }
+
+  .brand-subtitle {
+    font-family: var(--font-sans, system-ui, sans-serif);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .size-xl .brand-subtitle,
+  .size-lg .brand-subtitle {
+    font-size: 0.82rem;
+    letter-spacing: 0.28em;
+  }
+
+  .size-sm .brand-subtitle {
+    font-size: 0.52rem;
+    letter-spacing: 0.2em;
+  }
+
+  .line-decor {
+    flex: 1;
+    min-width: 12px;
+    height: 1px;
+    opacity: 0.7;
+  }
+
+  .brand-slogan {
+    font-family: var(--font-sans, system-ui, sans-serif);
+    font-size: 0.58rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+  }
+
+  .size-xl .brand-slogan,
+  .size-lg .brand-slogan {
+    font-size: 0.74rem;
+  }
+</style>

@@ -1,0 +1,3430 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angela Ramírez | Contadora Pública · Revisoría Fiscal y Auditoría Forense · Cali</title>
+    <meta name="description" content="Servicios profesionales de Revisoría Fiscal, Auditoría Forense, Peritaje Contable y Planeación Tributaria en Cali y Colombia. Tu información, en buenas manos." />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <style>
+      /* PALETA DE MARCA OFICIAL */
+      :root {
+        --color-primary-dark: #163A5F;        /* Azul Ejecutivo */
+        --color-primary-medium: #3F607A;      /* Azul Acero */
+        --color-primary-muted: #71879A;       /* Azul Grisáceo */
+        --color-bg-ivory: #FFFFFF;            /* Fondo Blanco Puro */
+        --color-bg-white: #FFFFFF;
+        --color-text-graphite: #252B31;       /* Gris Grafito */
+        --color-gold-champagne: #B89B5E;      /* Dorado Champagne */
+        --color-gold-light: #DFCA8D;          /* Brillo Dorado */
+        --color-gold-deep: #8E7238;
+
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+        --shadow-subtle: 0 4px 24px -2px rgba(22, 58, 95, 0.05);
+        --shadow-card: 0 12px 32px -4px rgba(22, 58, 95, 0.08);
+        --shadow-hover: 0 20px 48px -6px rgba(22, 58, 95, 0.12), 0 0 24px -2px rgba(184, 155, 94, 0.15);
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--color-text-graphite);
+        background-color: #FFFFFF;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        background-color: #FFFFFF;
+      }
+
+      ::selection {
+        background-color: var(--color-primary-dark);
+        color: #FFFFFF;
+      }
+
+      h1, h2, h3, .font-serif {
+        font-family: var(--font-serif);
+        font-weight: 600;
+        color: var(--color-primary-dark);
+        line-height: 1.15;
+      }
+
+      p {
+        color: #526373;
+        font-size: 1.02rem;
+        line-height: 1.7;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1220px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .container { padding: 0 2.5rem; }
+      }
+
+      /* BOTONES */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+        padding: 0.85rem 1.75rem;
+        font-family: var(--font-sans);
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--color-primary-dark) 0%, #20456E 100%);
+        color: #FFFFFF;
+        box-shadow: 0 4px 18px rgba(22, 58, 95, 0.2);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(22, 58, 95, 0.3);
+        border-color: var(--color-gold-champagne);
+      }
+
+      .btn-gold {
+        background: linear-gradient(135deg, #B89B5E 0%, #9C7F43 100%);
+        color: #FFFFFF;
+        box-shadow: 0 4px 18px rgba(184, 155, 94, 0.3);
+      }
+
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 28px rgba(184, 155, 94, 0.45);
+        background: linear-gradient(135deg, #C7AB6E 0%, #A6894D 100%);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--color-primary-dark);
+        border-color: rgba(22, 58, 95, 0.25);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--color-primary-dark);
+        background-color: rgba(22, 58, 95, 0.04);
+        transform: translateY(-2px);
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.35rem 0.85rem;
+        border-radius: 20px;
+        background-color: rgba(22, 58, 95, 0.06);
+        color: var(--color-primary-dark);
+        border: 1px solid rgba(22, 58, 95, 0.12);
+      }
+
+      .badge-gold {
+        background-color: rgba(184, 155, 94, 0.1);
+        color: #8E7238;
+        border-color: rgba(184, 155, 94, 0.35);
+      }
+
+      .gold-divider {
+        width: 48px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--color-gold-champagne), transparent);
+        margin: 1.2rem 0;
+      }
+
+      .gold-divider-center {
+        width: 56px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--color-gold-champagne), transparent);
+        margin: 1.2rem auto;
+      }
+
+      .text-center { text-align: center; }
+
+      /* PUNTERO DINÁMICO SUTIL (CUSTOM CURSOR) */
+      #custom-cursor-container {
+        pointer-events: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        z-index: 99999;
+      }
+
+      #cursor-dot {
+        position: fixed;
+        top: 0; left: 0;
+        width: 7px; height: 7px;
+        background-color: var(--color-gold-champagne);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        box-shadow: 0 0 8px rgba(184, 155, 94, 0.6);
+        transition: transform 0.12s ease;
+      }
+
+      #cursor-follower {
+        position: fixed;
+        top: 0; left: 0;
+        width: 34px; height: 34px;
+        border: 1.5px solid rgba(184, 155, 94, 0.55);
+        background: radial-gradient(circle, rgba(184, 155, 94, 0.08) 0%, transparent 70%);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                    height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                    border-color 0.3s ease;
+      }
+
+      body.cursor-hover #cursor-follower {
+        width: 56px; height: 56px;
+        border-color: rgba(184, 155, 94, 0.95);
+        background: radial-gradient(circle, rgba(184, 155, 94, 0.16) 0%, rgba(22, 58, 95, 0.05) 80%);
+      }
+
+      @media (pointer: coarse), (hover: none) {
+        #custom-cursor-container { display: none !important; }
+      }
+
+      /* HEADER */
+      .site-header {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(22, 58, 95, 0.08);
+        height: 78px;
+        display: flex;
+        align-items: center;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand-box {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+      }
+
+      .brand-title-wrap {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .b-name {
+        font-family: var(--font-serif);
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        color: var(--color-primary-dark);
+        line-height: 1.1;
+      }
+
+      .b-sub {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        color: var(--color-gold-champagne);
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: none;
+        gap: 1.8rem;
+        align-items: center;
+      }
+
+      @media (min-width: 992px) {
+        .nav-links { display: flex; }
+      }
+
+      .nav-item {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--color-primary-dark);
+      }
+
+      .nav-item:hover { color: var(--color-gold-champagne); }
+
+      /* HERO FULL-WIDTH PANORÁMICO & RESPONSIVE */
+      .hero-section {
+        position: relative;
+        width: 100%;
+        min-height: calc(100vh - 78px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: clamp(100px, 11vh, 140px);
+        padding-bottom: clamp(50px, 7vh, 85px);
+        background-color: transparent;
+        overflow: hidden;
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      /* Contenedor Fluido Full-Width */
+      .hero-container-fluid {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        padding-left: clamp(1.25rem, 4vw, 4.5rem);
+        padding-right: clamp(1.25rem, 4vw, 4.5rem);
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      .hero-logo-center {
+        margin-bottom: clamp(0.75rem, 1.8vh, 1.25rem);
+      }
+
+      .logo-3d-halo {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.8rem;
+        padding: 0.8rem;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .logo-3d-halo:hover {
+        transform: translateY(-3px) scale(1.04);
+      }
+
+      .hero-logo-img {
+        height: auto;
+        width: clamp(110px, 11vw, 155px);
+        object-fit: contain;
+        filter: drop-shadow(0 8px 22px rgba(22, 58, 95, 0.22)) drop-shadow(0 2px 6px rgba(184, 155, 94, 0.3));
+        transition: transform 0.4s ease;
+      }
+
+      /* 2. Brand Lockup Oficial Centrado & Responsive */
+      .hero-brand-lockup {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0.4rem auto clamp(1.2rem, 2.8vh, 2rem);
+        padding: 0 0.5rem;
+        box-sizing: border-box;
+      }
+
+      .brand-hero-name {
+        font-family: var(--font-serif);
+        font-size: clamp(2rem, 5.5vw, 5.2rem);
+        font-weight: 700;
+        letter-spacing: clamp(0.14em, 1.6vw, 0.24em);
+        margin-right: -0.16em; /* Compensa la última letra para centrado milimétrico */
+        line-height: 1.08;
+        color: var(--color-primary-dark);
+        text-transform: uppercase;
+        text-align: center;
+        white-space: nowrap;
+        margin-top: 0.3rem;
+        margin-bottom: 0.2rem;
+      }
+
+      @media (max-width: 520px) {
+        .brand-hero-name {
+          font-size: clamp(1.75rem, 8.5vw, 2.5rem);
+          letter-spacing: 0.12em;
+          margin-right: -0.12em;
+        }
+      }
+
+      .brand-sub-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: clamp(0.6rem, 2vw, 1.4rem);
+        margin: 0.35rem 0 0.45rem;
+      }
+
+      .decor-line {
+        flex: 1;
+        height: 1px;
+        background-color: var(--color-gold-champagne);
+        opacity: 0.85;
+      }
+
+      .brand-sub-text {
+        font-family: var(--font-sans);
+        font-size: clamp(0.68rem, 1.4vw, 0.96rem);
+        font-weight: 700;
+        letter-spacing: clamp(0.18em, 1.2vw, 0.34em);
+        margin-right: -0.22em; /* Compensa la última letra */
+        color: var(--color-gold-champagne);
+        text-transform: uppercase;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .brand-slogan-text {
+        font-family: var(--font-sans);
+        font-size: clamp(0.65rem, 1.1vw, 0.84rem);
+        font-weight: 600;
+        letter-spacing: clamp(0.15em, 1vw, 0.3em);
+        margin-right: -0.18em;
+        color: var(--color-primary-muted);
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 0.25rem;
+      }
+
+      /* 3. MÓDULO DINÁMICO TYPEWRITER (MÁQUINA DE ESCRIBIR) FULL-WIDTH */
+      .hero-typewriter-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 1.2rem auto clamp(1.6rem, 3.5vh, 2.6rem);
+        min-height: clamp(65px, 8vw, 90px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 clamp(1rem, 3vw, 2.5rem);
+        box-sizing: border-box;
+      }
+
+      .typewriter-headline {
+        font-family: var(--font-serif);
+        font-size: clamp(1.45rem, 3.4vw, 2.85rem);
+        font-weight: 600;
+        line-height: 1.22;
+        letter-spacing: -0.01em;
+        color: var(--color-primary-dark);
+        margin: 0;
+        display: inline;
+        text-align: center;
+      }
+
+      .typewriter-text {
+        color: var(--color-primary-dark);
+        transition: color 0.2s ease;
+      }
+
+      .typewriter-cursor {
+        display: inline-block;
+        color: var(--color-gold-champagne);
+        font-weight: 300;
+        font-family: monospace, var(--font-sans);
+        margin-left: 3px;
+        animation: typewriter-cursor-blink 0.6s infinite ease-in-out;
+      }
+
+      @keyframes typewriter-cursor-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+
+      /* 4. Botón WhatsApp Exclusivo con Borde Dorado y Animación de Brillo */
+      .hero-actions-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0.5rem auto 0;
+      }
+
+      .btn-gold-glow {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.85rem;
+        padding: clamp(0.95rem, 1.8vh, 1.15rem) clamp(1.8rem, 3vw, 2.7rem);
+        font-family: var(--font-sans);
+        font-size: clamp(0.92rem, 1.15vw, 1.05rem);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-primary-dark);
+        text-decoration: none;
+        background: transparent;
+        border-radius: 50px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, color 0.3s ease;
+        z-index: 1;
+        /* Borde base dorado luminoso */
+        border: 2px solid #B89B5E;
+        box-shadow: 0 0 18px rgba(184, 155, 94, 0.28), inset 0 0 10px rgba(184, 155, 94, 0.08);
+        animation: gold-border-pulse 3s infinite ease-in-out;
+      }
+
+      /* Haz de luz de brillo que viaja por todo el borde */
+      .btn-gold-glow::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(
+          from 0deg,
+          transparent 0deg,
+          transparent 70deg,
+          rgba(255, 235, 175, 0.95) 110deg,
+          #DFCA8D 130deg,
+          #B89B5E 150deg,
+          transparent 190deg,
+          transparent 360deg
+        );
+        animation: rotate-border-beam 3.5s linear infinite;
+        z-index: -2;
+        opacity: 0.85;
+      }
+
+      /* Fondo interior para transparencia limpia */
+      .btn-gold-glow::after {
+        content: '';
+        position: absolute;
+        inset: 2px;
+        background: #FFFFFF;
+        border-radius: 48px;
+        z-index: -1;
+        transition: background 0.3s ease;
+      }
+
+      /* Destello de brillo transversal periódico */
+      .btn-shine-sweep {
+        position: absolute;
+        top: 0;
+        left: -120%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          rgba(223, 202, 141, 0.85),
+          rgba(255, 255, 255, 0.95),
+          rgba(223, 202, 141, 0.85),
+          transparent
+        );
+        transform: skewX(-25deg);
+        animation: shine-sweep-anim 4.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      @keyframes rotate-border-beam {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes gold-border-pulse {
+        0%, 100% {
+          box-shadow: 0 0 16px rgba(184, 155, 94, 0.25), 0 4px 15px rgba(22, 58, 95, 0.05);
+          border-color: #B89B5E;
+        }
+        50% {
+          box-shadow: 0 0 30px rgba(184, 155, 94, 0.55), 0 0 45px rgba(223, 202, 141, 0.35), 0 6px 20px rgba(22, 58, 95, 0.08);
+          border-color: #DFCA8D;
+        }
+      }
+
+      @keyframes shine-sweep-anim {
+        0%, 65% { left: -120%; }
+        100% { left: 220%; }
+      }
+
+      .btn-gold-glow:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 0 38px rgba(184, 155, 94, 0.75), 0 8px 25px rgba(22, 58, 95, 0.15);
+        color: #163A5F;
+      }
+
+      .btn-gold-glow:hover::after {
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .btn-gold-glow .wa-icon {
+        width: 24px;
+        height: 24px;
+        filter: drop-shadow(0 2px 6px rgba(37, 211, 102, 0.35));
+        transition: transform 0.3s ease;
+        z-index: 3;
+      }
+
+      .btn-gold-glow:hover .wa-icon {
+        transform: scale(1.12) rotate(6deg);
+      }
+
+      .btn-cta-text {
+        position: relative;
+        z-index: 3;
+      }
+
+      /* 5. MÉTRICAS FULL-WIDTH & RESPONSIVE (5 Highlights con Separación Ampliada) */
+      .metrics-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1.4rem;
+        width: 100%;
+        max-width: 1360px;
+        margin-top: clamp(2.5rem, 6vh, 4.2rem);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 14px;
+        border: 1px solid rgba(22, 58, 95, 0.08);
+        padding: clamp(1.8rem, 3vh, 2.5rem) clamp(1.2rem, 3vw, 2.8rem);
+        box-shadow: 0 12px 35px rgba(22, 58, 95, 0.04);
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 480px) {
+        .metrics-row {
+          grid-template-columns: 1fr;
+          gap: 1.8rem;
+          padding: 1.8rem 1.2rem;
+        }
+      }
+
+      @media (min-width: 680px) and (max-width: 1023px) {
+        .metrics-row {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2.2rem 1.8rem;
+          padding: 2.2rem 2rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .metrics-row {
+          grid-template-columns: repeat(5, 1fr);
+          gap: clamp(1.5rem, 2.6vw, 3rem);
+          padding: 2.5rem clamp(1.6rem, 3vw, 3.5rem);
+        }
+
+        .metrics-row > div:not(:last-child) {
+          border-right: 1px solid rgba(22, 58, 95, 0.08);
+          padding-right: clamp(1.2rem, 2vw, 2.4rem);
+        }
+      }
+
+      .metrics-row > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.45rem;
+      }
+
+      /* Tipografía ejecutiva para números reducida al 75% para máxima elegancia y legibilidad */
+      .metric-val {
+        font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
+        font-size: clamp(1.25rem, 1.55vw, 1.75rem);
+        font-weight: 800;
+        color: var(--color-primary-dark);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "lnum" 1, "tnum" 1;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .metric-tag {
+        font-family: var(--font-sans);
+        font-size: clamp(0.72rem, 0.85vw, 0.82rem);
+        font-weight: 700;
+        color: var(--color-gold-champagne);
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        line-height: 1.25;
+        text-align: center;
+      }
+
+      .metrics-row p {
+        font-family: var(--font-sans);
+        font-size: clamp(0.74rem, 0.8vw, 0.82rem);
+        color: #637587;
+        line-height: 1.4;
+        text-align: center;
+        margin: 0;
+      }
+
+      /* ==========================================================================
+         SECCIÓN SOBRE MÍ CON ANIMACIÓN AL SCROLL
+         ========================================================================== */
+      .about-section {
+        position: relative;
+        padding: clamp(4.5rem, 8vh, 7rem) 0;
+        background: transparent;
+        overflow-x: clip;
+      }
+
+      /* Animación Progresiva al Scroll */
+      .scroll-reveal-section {
+        opacity: 0;
+        transform: translateY(50px) scale(0.985);
+        transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+      }
+
+      .scroll-reveal-section.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-35px);
+        transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+      }
+
+      .reveal-right {
+        opacity: 0;
+        transform: translateX(35px);
+        transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+      }
+
+      .reveal-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s;
+      }
+
+      .scroll-reveal-section.is-visible .reveal-left,
+      .scroll-reveal-section.is-visible .reveal-right,
+      .scroll-reveal-section.is-visible .reveal-up {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
+      .about-header {
+        margin-bottom: clamp(2.5rem, 5vh, 4rem);
+      }
+
+      .about-main-title {
+        display: inline-block;
+        font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+        font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+        font-weight: 700;
+        color: var(--color-primary-dark);
+        margin-top: 0.6rem;
+        line-height: 1.15;
+        max-width: 100%;
+      }
+
+      .about-lead-subtitle {
+        font-family: var(--font-sans);
+        font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+        color: #637587;
+        margin-top: 0.5rem;
+        font-weight: 500;
+      }
+
+      /* Línea dorada animada del ancho del nombre */
+      .name-divider-track {
+        display: block;
+        width: min(600px, 90vw);
+        max-width: 100%;
+        height: 3px;
+        margin: 1.25rem auto 0 auto;
+        position: relative;
+        background: rgba(184, 155, 94, 0.15);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .name-divider-bar {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #9E7D3B 0%, #DFCA8D 45%, #FFF6D6 52%, #DFCA8D 60%, #B89B5E 100%);
+        background-size: 200% 100%;
+        transform-origin: left center;
+        transform: scaleX(0);
+        border-radius: 999px;
+        box-shadow: 0 0 10px rgba(223, 202, 141, 0.6);
+        transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+      }
+
+      .scroll-reveal-section.is-visible .name-divider-bar {
+        transform: scaleX(1);
+      }
+
+      /* Cuadrícula Principal */
+      .about-grid-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: clamp(2rem, 4vw, 3.5rem);
+        align-items: start;
+      }
+
+      @media (min-width: 992px) {
+        .about-grid-main {
+          grid-template-columns: 380px 1fr;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .about-grid-main {
+          grid-template-columns: 420px 1fr;
+          gap: 4rem;
+        }
+      }
+
+      /* Columna Izquierda: Contenedor Sticky y Tarjeta de Perfil */
+      .about-sticky-sidebar {
+        position: relative;
+        width: 100%;
+      }
+
+      @media (min-width: 992px) {
+        .about-sticky-sidebar {
+          position: sticky;
+          top: 96px;
+          align-self: start;
+          z-index: 10;
+        }
+      }
+
+      .about-profile-card {
+        background: rgba(255, 255, 255, 0.93);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(22, 58, 95, 0.1);
+        border-radius: 16px;
+        padding: clamp(1.6rem, 2.4vw, 2.2rem) 1.5rem;
+        box-shadow: 0 16px 45px rgba(22, 58, 95, 0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        width: 100%;
+      }
+
+      .profile-photo-wrapper {
+        position: relative;
+        width: clamp(140px, 14vw, 170px);
+        height: clamp(140px, 14vw, 170px);
+        margin: 0 auto 1.2rem;
+      }
+
+      .photo-glow-aura {
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, rgba(223, 202, 141, 0.6), rgba(184, 155, 94, 0.2));
+        filter: blur(8px);
+        z-index: 0;
+      }
+
+      .profile-photo-img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center top;
+        border: 3px solid #B89B5E;
+        box-shadow: 0 8px 25px rgba(22, 58, 95, 0.15);
+        background: #FAFAF8;
+        z-index: 1;
+      }
+
+      .profile-meta-block {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+
+      .profile-card-name {
+        font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--color-primary-dark);
+        margin: 0;
+      }
+
+      .profile-card-role {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--color-gold-champagne);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin: 0.25rem 0 1rem;
+      }
+
+      .profile-credentials-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: left;
+        border-top: 1px solid rgba(22, 58, 95, 0.08);
+        padding-top: 1.1rem;
+        width: 100%;
+      }
+
+      .credential-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.45rem 0.6rem;
+        border-radius: 8px;
+        background: rgba(22, 58, 95, 0.02);
+        border: 1px solid rgba(22, 58, 95, 0.04);
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      .credential-item:hover {
+        background: rgba(184, 155, 94, 0.08);
+        transform: translateX(3px);
+      }
+
+      .cred-icon-gold {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: rgba(184, 155, 94, 0.12);
+        border: 1px solid rgba(184, 155, 94, 0.3);
+        color: var(--color-gold-champagne, #B89B5E);
+        flex-shrink: 0;
+      }
+
+      .cred-title {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--color-primary-dark);
+        line-height: 1.3;
+      }
+
+      /* Columna Derecha: Narrativa y Logros */
+      .about-narrative-col {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .about-bio-box {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(22, 58, 95, 0.08);
+        border-radius: 12px;
+        padding: clamp(1.5rem, 2.5vw, 2.2rem);
+        box-shadow: 0 10px 30px rgba(22, 58, 95, 0.03);
+      }
+
+      .bio-subtitle {
+        font-family: var(--font-sans);
+        font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+        font-weight: 800;
+        color: var(--color-primary-dark);
+        margin: 0 0 1rem;
+        letter-spacing: -0.015em;
+      }
+
+      .bio-text {
+        font-size: 0.95rem;
+        color: #4C5D6E;
+        line-height: 1.7;
+        margin: 0 0 0.85rem;
+      }
+
+      .bio-text:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Logros */
+      .achievements-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .achievements-heading {
+        font-family: var(--font-sans);
+        font-size: clamp(1rem, 1.25vw, 1.2rem);
+        font-weight: 800;
+        color: var(--color-primary-dark);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 0;
+      }
+
+      .gold-bullet {
+        color: var(--color-gold-champagne);
+        font-size: 0.85rem;
+      }
+
+      .achievements-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+
+      @media (min-width: 640px) {
+        .achievements-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .achieve-card {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(22, 58, 95, 0.08);
+        border-radius: 10px;
+        padding: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .achieve-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--color-gold-champagne);
+        opacity: 0.4;
+        transition: opacity 0.3s ease, width 0.3s ease;
+      }
+
+      .achieve-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(22, 58, 95, 0.07);
+        border-color: rgba(184, 155, 94, 0.35);
+      }
+
+      .achieve-card:hover::before {
+        opacity: 1;
+        width: 5px;
+      }
+
+      .achieve-header {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+      }
+
+      .achieve-number {
+        font-family: 'Plus Jakarta Sans', var(--font-sans), sans-serif;
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--color-gold-champagne);
+        font-variant-numeric: lining-nums tabular-nums;
+      }
+
+      .achieve-title {
+        font-family: var(--font-sans);
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--color-primary-dark);
+        margin: 0;
+        line-height: 1.35;
+      }
+
+      .achieve-desc {
+        font-size: 0.86rem;
+        color: #637587;
+        line-height: 1.55;
+        margin: 0;
+      }
+
+      /* Recuadro de Cierre Editorial de Confianza (Ancho Completo de la Hoja) */
+      .about-cta-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 100%;
+        margin-top: clamp(2.5rem, 5vh, 3.8rem);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(184, 155, 94, 0.3);
+        border-radius: 12px;
+        padding: clamp(1.4rem, 2.5vw, 1.8rem) clamp(1.8rem, 3.5vw, 3rem);
+        box-shadow: 0 10px 30px rgba(22, 58, 95, 0.04);
+        text-align: center;
+        box-sizing: border-box;
+      }
+
+      .cta-quote {
+        font-family: var(--font-sans);
+        font-size: clamp(0.98rem, 1.2vw, 1.15rem);
+        font-weight: 600;
+        color: var(--color-primary-dark);
+        margin: 0;
+        font-style: italic;
+        line-height: 1.6;
+        text-align: center;
+        width: 100%;
+        max-width: 980px;
+        letter-spacing: -0.01em;
+      }
+
+      /* SERVICIOS */
+      .section-wrap {
+        position: relative;
+        z-index: 1;
+        padding: 90px 0;
+      }
+
+      .bg-white { background: transparent; }
+
+      .section-h2 {
+        font-size: 2.6rem;
+        margin-top: 0.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .section-h2 { font-size: 3.2rem; }
+      }
+
+      /* Línea dorada en el ancho de la página (animada de izquierda a derecha) */
+      .services-divider-track {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 3px;
+        margin: 1.4rem auto 2.2rem auto;
+        position: relative;
+        background: rgba(184, 155, 94, 0.15);
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .services-divider-bar {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #9E7D3B 0%, #DFCA8D 45%, #FFF6D6 52%, #DFCA8D 60%, #B89B5E 100%);
+        background-size: 200% 100%;
+        transform-origin: left center;
+        transform: scaleX(0);
+        border-radius: 999px;
+        box-shadow: 0 0 10px rgba(223, 202, 141, 0.6);
+        transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+      }
+
+      .scroll-reveal-section.is-visible .services-divider-bar {
+        transform: scaleX(1);
+      }
+
+      /* SECCIÓN SERVICIOS: TARJETA COMPACTA Y PESTAÑAS INTERNAS */
+      #servicios.services-section-compact {
+        padding: 45px 0 35px;
+      }
+
+      .services-unified-card {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(22, 58, 95, 0.12);
+        border-radius: 16px;
+        padding: 1.5rem 1.8rem 1.8rem;
+        box-shadow: 0 10px 30px rgba(22, 58, 95, 0.06);
+        margin: 0 auto;
+      }
+
+      @media (max-width: 768px) {
+        .services-unified-card {
+          padding: 1.1rem 1rem 1.3rem;
+          border-radius: 12px;
+        }
+      }
+
+      .card-tabs-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1.15rem;
+        border-bottom: 1px solid rgba(22, 58, 95, 0.08);
+      }
+
+      .t-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.52rem 1.1rem;
+        background: #163A5F;
+        border: 1.5px solid rgba(22, 58, 95, 0.4);
+        border-radius: 999px;
+        font-family: var(--font-sans, 'Montserrat', sans-serif);
+        font-size: 0.83rem;
+        font-weight: 600;
+        color: #FFFFFF;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 6px rgba(22, 58, 95, 0.12);
+      }
+
+      .t-btn:hover {
+        background: #1D4B7A;
+        border-color: rgba(223, 202, 141, 0.5);
+        color: #FFFFFF;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(22, 58, 95, 0.2);
+      }
+
+      .t-btn.active {
+        background: #0D263F;
+        color: #DFCA8D;
+        border: 2px solid #DFCA8D;
+        font-weight: 700;
+        box-shadow: 0 4px 14px rgba(13, 38, 63, 0.25), 0 0 10px rgba(223, 202, 141, 0.3);
+      }
+
+      .service-panel {
+        display: none;
+        background: transparent;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      .service-panel.active {
+        display: block;
+        animation: panelFadeIn 0.3s ease;
+      }
+
+      @keyframes panelFadeIn {
+        from { opacity: 0; transform: translateY(6px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ENCABEZADO DEL EJE */
+      .axis-header {
+        margin-bottom: 1.25rem;
+        text-align: left;
+      }
+
+      .axis-title {
+        font-size: 1.65rem;
+        color: #163A5F;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        margin-top: 0.35rem;
+        margin-bottom: 0.25rem;
+        line-height: 1.25;
+      }
+
+      .axis-tagline {
+        font-weight: 600;
+        color: #B89B5E;
+        font-size: 0.95rem;
+        margin-bottom: 0.45rem;
+      }
+
+      .axis-summary {
+        font-size: 0.9rem;
+        color: #4A5568;
+        line-height: 1.55;
+        max-width: 950px;
+      }
+
+      /* CUADRÍCULA DE LOS 5 SUBSERVICIOS */
+      .subservices-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+        margin: 1.2rem 0;
+      }
+
+      @media (min-width: 560px) {
+        .subservices-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 860px) {
+        .subservices-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (min-width: 1120px) {
+        .subservices-grid {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+
+      .subservice-card {
+        background: #FFFFFF;
+        border: 1px solid rgba(22, 58, 95, 0.1);
+        border-radius: 8px;
+        padding: 1.1rem 0.95rem;
+        box-shadow: 0 2px 8px rgba(22, 58, 95, 0.03);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .subservice-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(22, 58, 95, 0.08);
+        border-color: rgba(223, 202, 141, 0.7);
+      }
+
+      .subservice-top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.55rem;
+      }
+
+      .subservice-check-icon {
+        width: 17px;
+        height: 17px;
+        color: #25D366;
+        flex-shrink: 0;
+      }
+
+      .subservice-title {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: #163A5F;
+        margin-bottom: 0.35rem;
+        line-height: 1.3;
+      }
+
+      .subservice-desc {
+        font-size: 0.8rem;
+        color: #5A6A7E;
+        line-height: 1.45;
+        flex-grow: 1;
+      }
+
+      /* BARRA INFERIOR DE CADA EJE (LEGAL + CTA) */
+      .axis-bottom-bar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        align-items: center;
+        margin-top: 1.2rem;
+        padding-top: 1.1rem;
+        border-top: 1px solid rgba(22, 58, 95, 0.08);
+      }
+
+      @media (min-width: 860px) {
+        .axis-bottom-bar {
+          grid-template-columns: 1.4fr 1fr;
+        }
+      }
+
+      .axis-legal-box {
+        background: rgba(22, 58, 95, 0.03);
+        border-left: 3px solid #B89B5E;
+        padding: 0.75rem 1rem;
+        border-radius: 0 6px 6px 0;
+      }
+
+      .axis-legal-title {
+        font-size: 0.74rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #163A5F;
+        margin-bottom: 0.2rem;
+      }
+
+      .axis-legal-text {
+        font-size: 0.8rem;
+        color: #5A6A7E;
+        line-height: 1.4;
+      }
+
+      .axis-cta-wrap {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      @media (max-width: 859px) {
+        .axis-cta-wrap {
+          justify-content: stretch;
+        }
+        .axis-cta-wrap .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      .axis-cta-wrap .btn {
+        padding: 0.7rem 1.4rem;
+        font-size: 0.88rem;
+        border-radius: 999px;
+      }
+
+      /* ==========================================================================
+         SECCIÓN RECURSOS GRATIS
+         ========================================================================== */
+      .resources-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        margin-top: 3rem;
+      }
+
+      @media (min-width: 768px) {
+        .resources-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+        }
+      }
+
+      @media (min-width: 1100px) {
+        .resources-grid {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 1.5rem;
+        }
+      }
+
+      .resource-card {
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(22, 58, 95, 0.1);
+        border-radius: 12px;
+        padding: 2.2rem 1.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.2rem;
+        box-shadow: 0 4px 20px -2px rgba(22, 58, 95, 0.05);
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .resource-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #9E7D3B, #DFCA8D, #B89B5E);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+      }
+
+      .resource-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 36px -4px rgba(22, 58, 95, 0.12), 0 0 20px rgba(184, 155, 94, 0.2);
+        border-color: rgba(184, 155, 94, 0.45);
+      }
+
+      .resource-card:hover::before {
+        opacity: 1;
+      }
+
+      .resource-top-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .resource-icon-box {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, rgba(22, 58, 95, 0.06), rgba(184, 155, 94, 0.14));
+        border: 1px solid rgba(184, 155, 94, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #B89B5E;
+        flex-shrink: 0;
+        transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+
+      .resource-card:hover .resource-icon-box {
+        transform: scale(1.06);
+        background: linear-gradient(135deg, #163A5F, #244C73);
+        color: #DFCA8D;
+        border-color: #B89B5E;
+      }
+
+      .resource-card-title {
+        font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #163A5F;
+        line-height: 1.3;
+        margin: 0.4rem 0 0.6rem;
+      }
+
+      .resource-card-desc {
+        font-size: 0.88rem;
+        color: #556677;
+        line-height: 1.55;
+        flex-grow: 1;
+      }
+
+      .resource-format-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.76rem;
+        font-weight: 600;
+        color: #8E7238;
+        background: rgba(184, 155, 94, 0.08);
+        border: 1px solid rgba(184, 155, 94, 0.2);
+        padding: 0.35rem 0.65rem;
+        border-radius: 4px;
+        margin-top: 0.4rem;
+        width: fit-content;
+      }
+
+      .resource-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background: #163A5F;
+        color: #DFCA8D;
+        border: 1px solid #B89B5E;
+        border-radius: 6px;
+        font-family: var(--font-sans, 'Montserrat', sans-serif);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        cursor: pointer;
+      }
+
+      .resource-btn:hover {
+        background: #B89B5E;
+        color: #163A5F;
+        border-color: #B89B5E;
+        box-shadow: 0 4px 14px rgba(184, 155, 94, 0.35);
+        transform: translateY(-2px);
+      }
+
+      /* Banner de Acompañamiento Estratégico */
+      .resources-consultancy-banner {
+        margin-top: 3.5rem;
+        background: linear-gradient(135deg, #163A5F 0%, #0D263F 100%);
+        border: 1px solid rgba(184, 155, 94, 0.4);
+        border-radius: 12px;
+        padding: 2.2rem 2.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        box-shadow: 0 16px 40px rgba(22, 58, 95, 0.16);
+        position: relative;
+        overflow: hidden;
+      }
+
+      @media (min-width: 900px) {
+        .resources-consultancy-banner {
+          flex-direction: row;
+          text-align: left;
+          justify-content: space-between;
+          padding: 2.4rem 3rem;
+        }
+      }
+
+      .banner-content h4 {
+        font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin-bottom: 0.4rem;
+        line-height: 1.35;
+      }
+
+      .banner-content p {
+        color: #B5C9DB;
+        font-size: 0.94rem;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .banner-action-btn {
+        flex-shrink: 0;
+        padding: 0.85rem 1.8rem;
+        font-size: 0.86rem;
+      }
+
+      /* FOOTER */
+      .footer-wrap {
+        position: relative;
+        z-index: 1;
+        background: #112B47;
+        color: #FFFFFF;
+        padding: 70px 0 35px;
+        border-top: 2px solid var(--color-gold-champagne);
+        overflow: hidden;
+      }
+
+      .footer-brand-title {
+        color: #FFFFFF;
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+        letter-spacing: -0.01em;
+      }
+
+      .footer-slogan {
+        color: #B89B5E;
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      /* Línea Dorada: 50% del ancho de pantalla animada desde los extremos hacia el centro */
+      .footer-gold-divider {
+        width: 50vw;
+        max-width: 90%;
+        margin: 1.8rem auto 1.6rem;
+        position: relative;
+        height: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .footer-gold-track {
+        position: absolute;
+        inset: 0;
+        height: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: linear-gradient(90deg, 
+          rgba(223, 202, 141, 0.08) 0%, 
+          rgba(223, 202, 141, 0.35) 50%, 
+          rgba(223, 202, 141, 0.08) 100%
+        );
+        border-radius: 999px;
+      }
+
+      /* Haz luminoso desde el extremo izquierdo hacia el centro */
+      .gold-stream-left {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2.5px;
+        width: 25%;
+        background: linear-gradient(90deg, transparent, #DFCA8D 65%, #FFF9E0 100%);
+        border-radius: 999px;
+        box-shadow: 0 0 10px rgba(223, 202, 141, 0.85), 0 0 18px rgba(255, 246, 214, 0.7);
+        animation: streamFromLeft 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+
+      /* Haz luminoso desde el extremo derecho hacia el centro */
+      .gold-stream-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2.5px;
+        width: 25%;
+        background: linear-gradient(270deg, transparent, #DFCA8D 65%, #FFF9E0 100%);
+        border-radius: 999px;
+        box-shadow: 0 0 10px rgba(223, 202, 141, 0.85), 0 0 18px rgba(255, 246, 214, 0.7);
+        animation: streamFromRight 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+
+      @keyframes streamFromLeft {
+        0% {
+          left: 0%;
+          opacity: 0;
+          transform: translateY(-50%) scaleX(0.3);
+        }
+        20% {
+          opacity: 1;
+        }
+        75% {
+          left: calc(50% - 25%);
+          opacity: 1;
+          transform: translateY(-50%) scaleX(1);
+        }
+        95%, 100% {
+          left: calc(50% - 6px);
+          opacity: 0;
+          transform: translateY(-50%) scaleX(0.2);
+        }
+      }
+
+      @keyframes streamFromRight {
+        0% {
+          right: 0%;
+          opacity: 0;
+          transform: translateY(-50%) scaleX(0.3);
+        }
+        20% {
+          opacity: 1;
+        }
+        75% {
+          right: calc(50% - 25%);
+          opacity: 1;
+          transform: translateY(-50%) scaleX(1);
+        }
+        95%, 100% {
+          right: calc(50% - 6px);
+          opacity: 0;
+          transform: translateY(-50%) scaleX(0.2);
+        }
+      }
+
+      /* Nodo de colisión áureo central */
+      .gold-center-node {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #FFF9E0;
+        box-shadow: 0 0 10px #DFCA8D, 0 0 20px rgba(223, 202, 141, 0.8);
+        animation: centerPulseCollision 2.8s ease-in-out infinite;
+        z-index: 2;
+      }
+
+      @keyframes centerPulseCollision {
+        0%, 65% {
+          transform: translate(-50%, -50%) scale(0.6);
+          opacity: 0.35;
+          box-shadow: 0 0 6px rgba(223, 202, 141, 0.3);
+        }
+        85% {
+          transform: translate(-50%, -50%) scale(1.6);
+          opacity: 1;
+          box-shadow: 0 0 16px #FFF9E0, 0 0 28px rgba(223, 202, 141, 1);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(0.8);
+          opacity: 0.5;
+          box-shadow: 0 0 8px rgba(223, 202, 141, 0.5);
+        }
+      }
+
+      /* Ubicaciones: Cartago, Pereira, La Virginia */
+      .footer-locations {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-loc-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        color: #DFCA8D;
+        font-family: var(--font-sans, 'Montserrat', sans-serif);
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: rgba(223, 202, 141, 0.08);
+        border: 1px solid rgba(223, 202, 141, 0.28);
+        padding: 0.38rem 0.95rem;
+        border-radius: 999px;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .footer-loc-item:hover {
+        background: rgba(223, 202, 141, 0.18);
+        border-color: rgba(223, 202, 141, 0.65);
+        color: #FFF6D6;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 14px rgba(223, 202, 141, 0.25);
+      }
+
+      .loc-pin-icon {
+        width: 14px;
+        height: 14px;
+        stroke: #DFCA8D;
+        flex-shrink: 0;
+      }
+
+      .footer-loc-sep {
+        color: rgba(223, 202, 141, 0.45);
+        font-size: 1.1rem;
+        font-weight: 700;
+        user-select: none;
+      }
+
+      .footer-copy {
+        color: #72879A;
+        font-size: 0.8rem;
+        letter-spacing: 0.02em;
+      }
+
+      /* ==========================================================================
+         BOTÓN FLOTANTE PERMANENTE AZUL CORPORATIVO CON LÍNEA DORADA ANIMADA
+         ========================================================================== */
+      .floating-contact-wrap {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 9999;
+        pointer-events: auto;
+      }
+
+      .floating-contact-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.95rem;
+        padding: 0.55rem 1.6rem 0.55rem 0.65rem;
+        border-radius: 999px;
+        text-decoration: none;
+        position: relative;
+        background: linear-gradient(135deg, #163A5F 0%, #0D263F 65%, #081B2E 100%);
+        box-shadow: 
+          0 10px 30px rgba(13, 38, 63, 0.45),
+          0 0 20px rgba(184, 155, 94, 0.35);
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), 
+                    box-shadow 0.35s ease, 
+                    filter 0.35s ease;
+        overflow: hidden;
+      }
+
+      .floating-contact-btn:hover {
+        transform: translateY(-4px) scale(1.04);
+        box-shadow: 
+          0 16px 42px rgba(13, 38, 63, 0.6),
+          0 0 32px rgba(223, 202, 141, 0.7);
+        filter: brightness(1.06);
+      }
+
+      /* Borde en línea dorada animada fluida continua */
+      .floating-border-anim {
+        position: absolute;
+        inset: 0;
+        border-radius: 999px;
+        padding: 2px;
+        background: linear-gradient(90deg, #9E7D3B 0%, #DFCA8D 25%, #FFF9E0 50%, #DFCA8D 75%, #9E7D3B 100%);
+        background-size: 250% 100%;
+        animation: goldBorderFlow 3s linear infinite;
+        -webkit-mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      @keyframes goldBorderFlow {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 250% 50%; }
+      }
+
+      /* Barrido de brillo periódico */
+      .floating-shine {
+        position: absolute;
+        top: 0;
+        left: -120%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(223, 202, 141, 0.35), transparent);
+        transform: skewX(-24deg);
+        animation: floatingShineSweep 4.5s infinite ease-in-out;
+        pointer-events: none;
+      }
+
+      @keyframes floatingShineSweep {
+        0%, 65% { left: -120%; }
+        80%, 100% { left: 160%; }
+      }
+
+      /* Anillo de pulso áureo exterior */
+      .floating-pulse-ring {
+        position: absolute;
+        inset: -4px;
+        border-radius: 999px;
+        border: 2px solid rgba(223, 202, 141, 0.75);
+        opacity: 0;
+        animation: floatingPulse 2.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+        pointer-events: none;
+      }
+
+      @keyframes floatingPulse {
+        0% { transform: scale(0.96); opacity: 0.9; }
+        60%, 100% { transform: scale(1.18, 1.35); opacity: 0; }
+      }
+
+      /* Contenedor del icono */
+      .floating-icon-wrap {
+        position: relative;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #FFFFFF;
+        border: 1.5px solid rgba(223, 202, 141, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25), 0 0 10px rgba(223, 202, 141, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      /* Símbolo de WhatsApp 2x (44px) animado con vibración / campanilleo periódico */
+      .floating-wa-icon {
+        width: 44px;
+        height: 44px;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        animation: waChimeAnimation 3.6s ease-in-out infinite;
+        transform-origin: center center;
+      }
+
+      @keyframes waChimeAnimation {
+        0%, 100% {
+          transform: scale(1) rotate(0deg);
+        }
+        8%, 16% {
+          transform: scale(1.14) rotate(-10deg);
+        }
+        12%, 20% {
+          transform: scale(1.14) rotate(10deg);
+        }
+        24% {
+          transform: scale(1.08) rotate(-4deg);
+        }
+        28% {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+
+      .floating-contact-btn:hover .floating-wa-icon {
+        animation: waHoverWiggle 0.6s ease-in-out infinite alternate;
+      }
+
+      @keyframes waHoverWiggle {
+        0% { transform: scale(1.15) rotate(-8deg); }
+        100% { transform: scale(1.15) rotate(8deg); }
+      }
+
+      .floating-online-dot {
+        position: absolute;
+        bottom: 2px;
+        right: 2px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #25D366;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0 0 8px #25D366;
+        animation: dotBlink 1.8s ease-in-out infinite;
+      }
+
+      @keyframes dotBlink {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(0.85); }
+      }
+
+      /* Texto interno todo en mayúscula y en color dorado */
+      .floating-label {
+        font-family: var(--font-sans, 'Montserrat', sans-serif);
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #DFCA8D;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 0 14px rgba(223, 202, 141, 0.45);
+        white-space: nowrap;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+      }
+
+      .floating-contact-btn:hover .floating-label {
+        color: #FFF6D6;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 246, 214, 0.85);
+      }
+
+      @media (max-width: 640px) {
+        .floating-contact-wrap {
+          bottom: 18px;
+          right: 18px;
+        }
+
+        .floating-contact-btn {
+          padding: 0.45rem 1.3rem 0.45rem 0.55rem;
+          gap: 0.75rem;
+        }
+
+        .floating-icon-wrap {
+          width: 48px;
+          height: 48px;
+        }
+
+        .floating-wa-icon {
+          width: 40px;
+          height: 40px;
+        }
+
+        .floating-label {
+          font-size: 1.02rem;
+          letter-spacing: 0.07em;
+        }
+      }
+
+            /* ==========================================================================
+         FONDO CORPORATIVO ESTÁTICO ANIMADO AL SCROLL (CONTADURÍA PÚBLICA)
+         ========================================================================== */
+      /* Reglas Base del Lienzo Corporativo */
+      .accounting-fixed-bg {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        background: transparent;
+      }
+
+      .accounting-grid-pattern {
+        position: absolute;
+        inset: 0;
+        background-image: 
+          linear-gradient(to right, rgba(184, 155, 94, 0.05) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(184, 155, 94, 0.05) 1px, transparent 1px);
+        background-size: 60px 60px;
+        opacity: 0.85;
+        mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 95%);
+        -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 95%);
+        transition: opacity 0.4s ease;
+      }
+
+      .accounting-fixed-bg.is-scrolling .accounting-grid-pattern {
+        opacity: 1;
+      }
+
+      .accounting-motif {
+        position: absolute;
+        opacity: 0.18;
+        color: #B89B5E;
+        transition: opacity 0.45s ease, filter 0.45s ease;
+        will-change: transform, opacity;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .accounting-fixed-bg.is-scrolling .accounting-motif {
+        opacity: 0.35;
+        filter: drop-shadow(0 0 10px rgba(223, 202, 141, 0.6));
+      }
+
+      /* Animaciones de Flotación Ambiental Continua (Activas en Reposo) */
+      @keyframes motifFloatSway {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-7px) rotate(2deg); }
+      }
+
+      @keyframes motifFloatVertical {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-9px); }
+      }
+
+      @keyframes motifFloatPulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+
+      @keyframes motifFloatSwayRev {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(-2deg); }
+      }
+
+      @keyframes motifFloatSpin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes particleFloat {
+        0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
+        50% { transform: translateY(-14px) scale(1.3); opacity: 0.45; }
+      }
+
+      .motif-float-sway { animation: motifFloatSway 6.5s ease-in-out infinite; }
+      .motif-float-vertical { animation: motifFloatVertical 5.8s ease-in-out infinite; }
+      .motif-float-pulse { animation: motifFloatPulse 5.2s ease-in-out infinite; }
+      .motif-float-sway-rev { animation: motifFloatSwayRev 7.2s ease-in-out infinite; }
+      .motif-float-spin { animation: motifFloatSpin 80s linear infinite; transform-origin: center center; }
+
+      .delay-1 { animation-delay: -1.2s; }
+      .delay-2 { animation-delay: -2.5s; }
+      .delay-3 { animation-delay: -3.8s; }
+      .delay-4 { animation-delay: -5.0s; }
+
+      /* Tipografías de Micro-Símbolos */
+      .sym-serif {
+        font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+        font-weight: 700;
+        font-style: italic;
+        font-size: clamp(1.4rem, 1.8vw, 2.1rem);
+        line-height: 1;
+      }
+
+      .sym-sans {
+        font-family: var(--font-sans, 'Plus Jakarta Sans', sans-serif);
+        font-weight: 300;
+        font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+        line-height: 1;
+      }
+
+      /* Posicionamiento y Parallax Reactivo Multi-Capa (Motivos) */
+      .motif-m01 { top: 6%; right: 12%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.14px), 0); }
+      .motif-m02 { top: 11%; left: 5%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.16px), 0); }
+      .motif-m03 { top: 5%; left: 47%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.12px), 0); }
+      .motif-m04 { top: 17%; left: 26%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.15px), 0); }
+      .motif-m05 { top: 15%; right: 28%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.18px), 0); }
+      .motif-m06 { top: 22%; left: 52%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.14px), 0); }
+      .motif-m07 { top: 8%; left: 19%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.2px), 0); }
+      .motif-m08 { top: 20%; right: 6%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.17px), 0); }
+      .motif-m09 { top: 26%; left: 10%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.15px), 0); }
+      .motif-m10 { top: 28%; left: 49%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.19px), 0); }
+      .motif-m11 { top: 30%; right: 16%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.16px), 0); }
+      .motif-m12 { top: 34%; left: 24%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.18px), 0); }
+      .motif-m13 { top: 36%; right: 30%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.21px), 0); }
+      .motif-m14 { top: 41%; left: 42%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.14px), 0); }
+      .motif-m15 { top: 43%; right: 9%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.17px), 0); }
+      .motif-m16 { top: 39%; left: 4%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.2px), 0); }
+      .motif-m17 { top: 48%; left: 51%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.15px), 0); }
+      .motif-m18 { top: 52%; left: 17%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.21px), 0); }
+      .motif-m19 { top: 54%; right: 20%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.18px), 0); }
+      .motif-m20 { top: 59%; left: 32%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.16px), 0); }
+      .motif-m21 { top: 62%; right: 35%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.2px), 0); }
+      .motif-m22 { top: 65%; left: 7%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.15px), 0); }
+      .motif-m23 { top: 66%; right: 7%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.17px), 0); }
+      .motif-m24 { top: 58%; left: 48%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.13px), 0); }
+      .motif-m25 { top: 71%; left: 21%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.19px), 0); }
+      .motif-m26 { top: 74%; right: 17%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.17px), 0); }
+      .motif-m27 { top: 78%; left: 47%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.14px), 0); }
+      .motif-m28 { top: 83%; left: 13%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.22px), 0); }
+      .motif-m29 { top: 87%; left: 53%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.18px), 0); }
+      .motif-m30 { top: 91%; right: 19%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.16px), 0); }
+
+      /* Posicionamiento y Parallax (Símbolos) */
+      .motif-s01 { top: 8%; left: 36%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.18px), 0); }
+      .motif-s02 { top: 14%; right: 14%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.2px), 0); }
+      .motif-s03 { top: 23%; right: 23%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.16px), 0); }
+      .motif-s04 { top: 31%; left: 33%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.17px), 0); }
+      .motif-s05 { top: 45%; left: 13%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.21px), 0); }
+      .motif-s06 { top: 49%; right: 11%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.15px), 0); }
+      .motif-s07 { top: 61%; left: 24%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.19px), 0); }
+      .motif-s08 { top: 69%; right: 28%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.22px), 0); }
+      .motif-s09 { top: 81%; left: 34%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.17px), 0); }
+      .motif-s10 { top: 88%; right: 12%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.18px), 0); }
+      .motif-s11 { top: 42%; right: 38%; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.14px), 0); }
+      .motif-s12 { top: 94%; left: 30%; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.16px), 0); }
+
+      /* Partículas Áureas Flotantes */
+      .accounting-particle {
+        position: absolute;
+        border-radius: 50%;
+        background: #DFCA8D;
+        opacity: 0.22;
+        box-shadow: 0 0 10px rgba(223, 202, 141, 0.6);
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+        animation: particleFloat 6s ease-in-out infinite;
+      }
+
+      .accounting-fixed-bg.is-scrolling .accounting-particle {
+        opacity: 0.55;
+      }
+      .p01 { width: 6px; height: 6px; top: 7%; left: 14%; animation-delay: 0s; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.22px), 0); }
+      .p02 { width: 7px; height: 7px; top: 10%; left: 54%; animation-delay: 1.2s; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.2px), 0); }
+      .p03 { width: 8px; height: 8px; top: 19%; right: 20%; animation-delay: 2.4s; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.24px), 0); }
+      .p04 { width: 6px; height: 6px; top: 27%; left: 35%; animation-delay: 0.8s; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.22px), 0); }
+      .p05 { width: 7px; height: 7px; top: 33%; right: 14%; animation-delay: 3.2s; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.19px), 0); }
+      .p06 { width: 8px; height: 8px; top: 44%; left: 15%; animation-delay: 1.6s; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.25px), 0); }
+      .p07 { width: 6px; height: 6px; top: 53%; left: 40%; animation-delay: 2.8s; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.21px), 0); }
+      .p08 { width: 7px; height: 7px; top: 64%; right: 24%; animation-delay: 0.5s; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.23px), 0); }
+      .p09 { width: 8px; height: 8px; top: 70%; left: 9%; animation-delay: 3.6s; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.2px), 0); }
+      .p10 { width: 6px; height: 6px; top: 76%; left: 56%; animation-delay: 1.9s; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.19px), 0); }
+      .p11 { width: 7px; height: 7px; top: 84%; left: 26%; animation-delay: 2.2s; transform: translate3d(0, calc(var(--bg-scroll, 0) * 0.22px), 0); }
+      .p12 { width: 8px; height: 8px; top: 92%; right: 32%; animation-delay: 4.0s; transform: translate3d(0, calc(var(--bg-scroll, 0) * -0.21px), 0); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .accounting-motif, .accounting-particle, .motif-float-sway, .motif-float-vertical, .motif-float-pulse, .motif-float-sway-rev, .motif-float-spin {
+          transform: none !important;
+          transition: none !important;
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Puntero Dinámico Sutil -->
+    <div id="custom-cursor-container">
+      <div id="cursor-dot"></div>
+      <div id="cursor-follower"></div>
+    </div>
+
+    <!-- Fondo Corporativo Estático y Animado al Scroll (Temática Contaduría Pública) -->
+    <div id="corporate-accounting-bg" class="accounting-fixed-bg" style="position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 0; overflow: hidden; background: transparent;" aria-hidden="true">
+      <!-- Trama sutil de cuadrícula contable / papel de seguridad -->
+      <div class="accounting-grid-pattern"></div>
+
+      <!-- Constelación Refinada de Motivos Contables y Auditoría Forense -->
+      <!-- Balanza Hero Sup -->
+      <div class="accounting-motif motif-m01">
+        <div class="motif-float-sway delay-1"><svg width="54" height="54" viewBox="0 0 100 100" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M35 90h30M50 90V18M44 18h12M47 14h6"/><circle cx="50" cy="22" r="3.5" fill="#DFCA8D" fill-opacity="0.35"/><path d="M18 30 L50 22 L82 30"/><circle cx="18" cy="30" r="2" fill="#B89B5E"/><circle cx="82" cy="30" r="2" fill="#B89B5E"/><path d="M18 30 L8 58 M18 30 L28 58"/><path d="M6 58 Q18 66 30 58 Z" fill="#DFCA8D" fill-opacity="0.22"/><path d="M82 30 L72 58 M82 30 L92 58"/><path d="M70 58 Q82 66 94 58 Z" fill="#DFCA8D" fill-opacity="0.22"/></svg></div>
+      </div>
+
+      <!-- Gráfica Hero Izq -->
+      <div class="accounting-motif motif-m02">
+        <div class="motif-float-vertical delay-2"><svg width="52" height="42" viewBox="0 0 120 90" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 15v65h90"/><line x1="15" y1="35" x2="105" y2="35" stroke-dasharray="3 3" opacity="0.6"/><line x1="15" y1="55" x2="105" y2="55" stroke-dasharray="3 3" opacity="0.6"/><rect x="25" y="50" width="13" height="30" rx="2" fill="#DFCA8D" fill-opacity="0.2"/><rect x="44" y="38" width="13" height="42" rx="2" fill="#DFCA8D" fill-opacity="0.25"/><rect x="63" y="26" width="13" height="54" rx="2" fill="#DFCA8D" fill-opacity="0.3"/><rect x="82" y="16" width="13" height="64" rx="2" fill="#DFCA8D" fill-opacity="0.35"/><path d="M31 48 Q50 34 69 24 T95 12" stroke="#DFCA8D" stroke-width="2.2"/><circle cx="31" cy="48" r="3" fill="#B89B5E"/><circle cx="50" cy="36" r="3" fill="#B89B5E"/><circle cx="69" cy="24" r="3" fill="#B89B5E"/><circle cx="88" cy="14" r="3" fill="#DFCA8D"/></svg></div>
+      </div>
+
+      <!-- Libro Mayor Hero Centro -->
+      <div class="accounting-motif motif-m03">
+        <div class="motif-float-pulse delay-3"><svg width="50" height="40" viewBox="0 0 110 85" fill="none" stroke="#B89B5E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M55 20 Q30 14 10 18 v48 Q30 44 55 50 Q80 44 100 18 v48 Q80 64 55 70 Z" fill="#DFCA8D" fill-opacity="0.18"/><line x1="55" y1="20" x2="55" y2="70" stroke-width="2"/><line x1="18" y1="28" x2="48" y2="25" opacity="0.6"/><line x1="18" y1="36" x2="48" y2="33" opacity="0.6"/><line x1="18" y1="44" x2="48" y2="41" opacity="0.6"/><line x1="18" y1="52" x2="48" y2="49" opacity="0.6"/><line x1="62" y1="25" x2="92" y2="28" opacity="0.6"/><line x1="62" y1="33" x2="92" y2="36" opacity="0.6"/><line x1="62" y1="41" x2="92" y2="44" opacity="0.6"/><line x1="62" y1="49" x2="92" y2="52" opacity="0.6"/><path d="M55 20 Q58 35 62 55 L58 53 L54 58 Z" fill="#B89B5E" fill-opacity="0.35" stroke="none"/></svg></div>
+      </div>
+
+      <!-- Sello Hero Subtítulo -->
+      <div class="accounting-motif motif-m04">
+        <div class="motif-float-spin delay-1"><svg width="52" height="52" viewBox="0 0 100 100" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="44" stroke-width="1.8"/><circle cx="50" cy="50" r="38" stroke-dasharray="3 3" opacity="0.75"/><circle cx="50" cy="50" r="30" stroke-width="1.2" opacity="0.55"/><polygon points="50,26 53,36 63,33 58,41 67,46 58,51 63,60 53,56 50,66 47,56 37,60 42,51 33,46 42,41 37,33 47,36" fill="#DFCA8D" fill-opacity="0.22" stroke="#B89B5E" stroke-width="1.2"/><circle cx="50" cy="15" r="1.8" fill="#B89B5E"/><circle cx="50" cy="85" r="1.8" fill="#B89B5E"/><circle cx="15" cy="50" r="1.8" fill="#B89B5E"/><circle cx="85" cy="50" r="1.8" fill="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Lupa Hero Der -->
+      <div class="accounting-motif motif-m05">
+        <div class="motif-float-sway-rev delay-4"><svg width="40" height="40" viewBox="0 0 80 80" fill="none" stroke="#B89B5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="34" cy="34" r="22" stroke-width="2.2"/><circle cx="34" cy="34" r="17" stroke-dasharray="2 2" opacity="0.6" fill="#DFCA8D" fill-opacity="0.15"/><line x1="50" y1="50" x2="72" y2="72" stroke-width="4.5" stroke-linecap="round"/><path d="M26 34h16M34 26v16" stroke-width="1.5" opacity="0.7"/><circle cx="28" cy="28" r="2" fill="#B89B5E"/><circle cx="40" cy="40" r="2" fill="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Pluma Hero CTA -->
+      <div class="accounting-motif motif-m06">
+        <div class="motif-float-sway delay-2"><svg width="38" height="38" viewBox="0 0 80 80" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M62 14 L68 20 L30 58 L18 64 L24 52 Z" fill="#DFCA8D" fill-opacity="0.2"/><line x1="24" y1="52" x2="30" y2="58"/><path d="M18 64 L26 56"/><circle cx="28" cy="54" r="1.5" fill="#B89B5E"/><path d="M14 70 Q30 66 45 72 T70 66" stroke-width="1.4" opacity="0.6"/></svg></div>
+      </div>
+
+      <!-- Moneda Hero Izq -->
+      <div class="accounting-motif motif-m07">
+        <div class="motif-float-pulse delay-1"><svg width="36" height="36" viewBox="0 0 70 70" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="35" cy="35" r="30" stroke-width="2"/><circle cx="35" cy="35" r="24" stroke-dasharray="3 3" opacity="0.7"/><circle cx="35" cy="35" r="18" fill="#DFCA8D" fill-opacity="0.22"/><path d="M35 22 v26 M39 26 h-7 a3 3 0 0 0 0 6 h6 a3 3 0 0 1 0 6 h-8" stroke-width="2.2"/></svg></div>
+      </div>
+
+      <!-- Ábaco Hero Der -->
+      <div class="accounting-motif motif-m08">
+        <div class="motif-float-vertical delay-3"><svg width="46" height="38" viewBox="0 0 90 70" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="74" height="50" rx="3"/><line x1="8" y1="28" x2="82" y2="28" stroke-width="2"/><line x1="24" y1="10" x2="24" y2="60"/><line x1="40" y1="10" x2="40" y2="60"/><line x1="56" y1="10" x2="56" y2="60"/><line x1="70" y1="10" x2="70" y2="60"/><circle cx="24" cy="20" r="3" fill="#DFCA8D"/><circle cx="40" cy="20" r="3" fill="#DFCA8D"/><circle cx="56" cy="16" r="3" fill="#DFCA8D"/><circle cx="70" cy="20" r="3" fill="#DFCA8D"/><circle cx="24" cy="40" r="3" fill="#B89B5E"/><circle cx="24" cy="48" r="3" fill="#B89B5E"/><circle cx="40" cy="44" r="3" fill="#B89B5E"/><circle cx="56" cy="52" r="3" fill="#B89B5E"/><circle cx="70" cy="40" r="3" fill="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Calculadora Métricas Izq -->
+      <div class="accounting-motif motif-m09">
+        <div class="motif-float-vertical delay-4"><svg width="38" height="44" viewBox="0 0 70 80" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="8" width="50" height="64" rx="6"/><rect x="18" y="16" width="34" height="14" rx="2" fill="#DFCA8D" fill-opacity="0.25"/><line x1="42" y1="23" x2="48" y2="23" stroke-width="2"/><circle cx="23" cy="40" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="35" cy="40" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="47" cy="40" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="23" cy="52" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="35" cy="52" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="47" cy="52" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="23" cy="62" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="35" cy="62" r="3" fill="#B89B5E" fill-opacity="0.7"/><rect x="44" y="59" width="6" height="6" rx="1.5" fill="#DFCA8D"/></svg></div>
+      </div>
+
+      <!-- Escudo Métricas Centro -->
+      <div class="accounting-motif motif-m10">
+        <div class="motif-float-pulse delay-2"><svg width="40" height="46" viewBox="0 0 70 80" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M35 10 L58 20 V42 C58 58 35 70 35 70 C35 70 12 58 12 42 V20 Z" fill="#DFCA8D" fill-opacity="0.18"/><path d="M35 18 L50 25 V40 C50 52 35 62 35 62 C35 62 20 52 20 40 V25 Z" opacity="0.6" stroke-dasharray="2 2"/><path d="M26 38 L32 44 L44 32" stroke-width="2.5" stroke="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Reloj Métricas Der -->
+      <div class="accounting-motif motif-m11">
+        <div class="motif-float-sway-rev delay-1"><svg width="36" height="44" viewBox="0 0 60 76" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="10" x2="48" y2="10" stroke-width="2.5"/><line x1="12" y1="66" x2="48" y2="66" stroke-width="2.5"/><path d="M16 10 C16 32 44 32 44 10" opacity="0.4"/><path d="M18 10 Q30 38 18 66 H42 Q30 38 42 10 Z" fill="#DFCA8D" fill-opacity="0.2"/><circle cx="30" cy="52" r="4" fill="#B89B5E" fill-opacity="0.5"/><line x1="30" y1="36" x2="30" y2="44" stroke-dasharray="1 2" stroke-width="1.5"/></svg></div>
+      </div>
+
+      <!-- Certificado Sobre Mí Foto -->
+      <div class="accounting-motif motif-m12">
+        <div class="motif-float-sway delay-3"><svg width="40" height="44" viewBox="0 0 70 80" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="8" width="46" height="54" rx="4" fill="#DFCA8D" fill-opacity="0.18"/><line x1="20" y1="18" x2="40" y2="18" stroke-width="1.8"/><line x1="20" y1="26" x2="50" y2="26" opacity="0.6"/><line x1="20" y1="32" x2="50" y2="32" opacity="0.6"/><line x1="20" y1="38" x2="42" y2="38" opacity="0.6"/><circle cx="35" cy="50" r="6" stroke-width="1.5" fill="#DFCA8D" fill-opacity="0.35"/><path d="M32 55 L28 68 L35 64 L42 68 L38 55" fill="#B89B5E" fill-opacity="0.4"/></svg></div>
+      </div>
+
+      <!-- Balanza Sobre Mí Texto -->
+      <div class="accounting-motif motif-m13">
+        <div class="motif-float-sway delay-4"><svg width="54" height="54" viewBox="0 0 100 100" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M35 90h30M50 90V18M44 18h12M47 14h6"/><circle cx="50" cy="22" r="3.5" fill="#DFCA8D" fill-opacity="0.35"/><path d="M18 30 L50 22 L82 30"/><circle cx="18" cy="30" r="2" fill="#B89B5E"/><circle cx="82" cy="30" r="2" fill="#B89B5E"/><path d="M18 30 L8 58 M18 30 L28 58"/><path d="M6 58 Q18 66 30 58 Z" fill="#DFCA8D" fill-opacity="0.22"/><path d="M82 30 L72 58 M82 30 L92 58"/><path d="M70 58 Q82 66 94 58 Z" fill="#DFCA8D" fill-opacity="0.22"/></svg></div>
+      </div>
+
+      <!-- Gráfica Sobre Mí Bio -->
+      <div class="accounting-motif motif-m14">
+        <div class="motif-float-vertical delay-1"><svg width="52" height="42" viewBox="0 0 120 90" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 15v65h90"/><line x1="15" y1="35" x2="105" y2="35" stroke-dasharray="3 3" opacity="0.6"/><line x1="15" y1="55" x2="105" y2="55" stroke-dasharray="3 3" opacity="0.6"/><rect x="25" y="50" width="13" height="30" rx="2" fill="#DFCA8D" fill-opacity="0.2"/><rect x="44" y="38" width="13" height="42" rx="2" fill="#DFCA8D" fill-opacity="0.25"/><rect x="63" y="26" width="13" height="54" rx="2" fill="#DFCA8D" fill-opacity="0.3"/><rect x="82" y="16" width="13" height="64" rx="2" fill="#DFCA8D" fill-opacity="0.35"/><path d="M31 48 Q50 34 69 24 T95 12" stroke="#DFCA8D" stroke-width="2.2"/><circle cx="31" cy="48" r="3" fill="#B89B5E"/><circle cx="50" cy="36" r="3" fill="#B89B5E"/><circle cx="69" cy="24" r="3" fill="#B89B5E"/><circle cx="88" cy="14" r="3" fill="#DFCA8D"/></svg></div>
+      </div>
+
+      <!-- Libro Mayor Sobre Mí Der -->
+      <div class="accounting-motif motif-m15">
+        <div class="motif-float-pulse delay-2"><svg width="50" height="40" viewBox="0 0 110 85" fill="none" stroke="#B89B5E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M55 20 Q30 14 10 18 v48 Q30 44 55 50 Q80 44 100 18 v48 Q80 64 55 70 Z" fill="#DFCA8D" fill-opacity="0.18"/><line x1="55" y1="20" x2="55" y2="70" stroke-width="2"/><line x1="18" y1="28" x2="48" y2="25" opacity="0.6"/><line x1="18" y1="36" x2="48" y2="33" opacity="0.6"/><line x1="18" y1="44" x2="48" y2="41" opacity="0.6"/><line x1="18" y1="52" x2="48" y2="49" opacity="0.6"/><line x1="62" y1="25" x2="92" y2="28" opacity="0.6"/><line x1="62" y1="33" x2="92" y2="36" opacity="0.6"/><line x1="62" y1="41" x2="92" y2="44" opacity="0.6"/><line x1="62" y1="49" x2="92" y2="52" opacity="0.6"/><path d="M55 20 Q58 35 62 55 L58 53 L54 58 Z" fill="#B89B5E" fill-opacity="0.35" stroke="none"/></svg></div>
+      </div>
+
+      <!-- Sello Sobre Mí Izq -->
+      <div class="accounting-motif motif-m16">
+        <div class="motif-float-spin delay-3"><svg width="52" height="52" viewBox="0 0 100 100" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="44" stroke-width="1.8"/><circle cx="50" cy="50" r="38" stroke-dasharray="3 3" opacity="0.75"/><circle cx="50" cy="50" r="30" stroke-width="1.2" opacity="0.55"/><polygon points="50,26 53,36 63,33 58,41 67,46 58,51 63,60 53,56 50,66 47,56 37,60 42,51 33,46 42,41 37,33 47,36" fill="#DFCA8D" fill-opacity="0.22" stroke="#B89B5E" stroke-width="1.2"/><circle cx="50" cy="15" r="1.8" fill="#B89B5E"/><circle cx="50" cy="85" r="1.8" fill="#B89B5E"/><circle cx="15" cy="50" r="1.8" fill="#B89B5E"/><circle cx="85" cy="50" r="1.8" fill="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Lupa Servicios Tabs -->
+      <div class="accounting-motif motif-m17">
+        <div class="motif-float-vertical delay-2"><svg width="40" height="40" viewBox="0 0 80 80" fill="none" stroke="#B89B5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="34" cy="34" r="22" stroke-width="2.2"/><circle cx="34" cy="34" r="17" stroke-dasharray="2 2" opacity="0.6" fill="#DFCA8D" fill-opacity="0.15"/><line x1="50" y1="50" x2="72" y2="72" stroke-width="4.5" stroke-linecap="round"/><path d="M26 34h16M34 26v16" stroke-width="1.5" opacity="0.7"/><circle cx="28" cy="28" r="2" fill="#B89B5E"/><circle cx="40" cy="40" r="2" fill="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Pluma Servicio Panel Izq -->
+      <div class="accounting-motif motif-m18">
+        <div class="motif-float-sway delay-4"><svg width="38" height="38" viewBox="0 0 80 80" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M62 14 L68 20 L30 58 L18 64 L24 52 Z" fill="#DFCA8D" fill-opacity="0.2"/><line x1="24" y1="52" x2="30" y2="58"/><path d="M18 64 L26 56"/><circle cx="28" cy="54" r="1.5" fill="#B89B5E"/><path d="M14 70 Q30 66 45 72 T70 66" stroke-width="1.4" opacity="0.6"/></svg></div>
+      </div>
+
+      <!-- Calculadora Servicio Der -->
+      <div class="accounting-motif motif-m19">
+        <div class="motif-float-pulse delay-1"><svg width="38" height="44" viewBox="0 0 70 80" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="8" width="50" height="64" rx="6"/><rect x="18" y="16" width="34" height="14" rx="2" fill="#DFCA8D" fill-opacity="0.25"/><line x1="42" y1="23" x2="48" y2="23" stroke-width="2"/><circle cx="23" cy="40" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="35" cy="40" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="47" cy="40" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="23" cy="52" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="35" cy="52" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="47" cy="52" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="23" cy="62" r="3" fill="#B89B5E" fill-opacity="0.7"/><circle cx="35" cy="62" r="3" fill="#B89B5E" fill-opacity="0.7"/><rect x="44" y="59" width="6" height="6" rx="1.5" fill="#DFCA8D"/></svg></div>
+      </div>
+
+      <!-- Escudo Metodología Fase 1 -->
+      <div class="accounting-motif motif-m20">
+        <div class="motif-float-sway-rev delay-3"><svg width="40" height="46" viewBox="0 0 70 80" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M35 10 L58 20 V42 C58 58 35 70 35 70 C35 70 12 58 12 42 V20 Z" fill="#DFCA8D" fill-opacity="0.18"/><path d="M35 18 L50 25 V40 C50 52 35 62 35 62 C35 62 20 52 20 40 V25 Z" opacity="0.6" stroke-dasharray="2 2"/><path d="M26 38 L32 44 L44 32" stroke-width="2.5" stroke="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Reloj Metodología Fase 3 -->
+      <div class="accounting-motif motif-m21">
+        <div class="motif-float-vertical delay-2"><svg width="36" height="44" viewBox="0 0 60 76" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="10" x2="48" y2="10" stroke-width="2.5"/><line x1="12" y1="66" x2="48" y2="66" stroke-width="2.5"/><path d="M16 10 C16 32 44 32 44 10" opacity="0.4"/><path d="M18 10 Q30 38 18 66 H42 Q30 38 42 10 Z" fill="#DFCA8D" fill-opacity="0.2"/><circle cx="30" cy="52" r="4" fill="#B89B5E" fill-opacity="0.5"/><line x1="30" y1="36" x2="30" y2="44" stroke-dasharray="1 2" stroke-width="1.5"/></svg></div>
+      </div>
+
+      <!-- Balanza Metodología Izq -->
+      <div class="accounting-motif motif-m22">
+        <div class="motif-float-sway delay-1"><svg width="54" height="54" viewBox="0 0 100 100" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M35 90h30M50 90V18M44 18h12M47 14h6"/><circle cx="50" cy="22" r="3.5" fill="#DFCA8D" fill-opacity="0.35"/><path d="M18 30 L50 22 L82 30"/><circle cx="18" cy="30" r="2" fill="#B89B5E"/><circle cx="82" cy="30" r="2" fill="#B89B5E"/><path d="M18 30 L8 58 M18 30 L28 58"/><path d="M6 58 Q18 66 30 58 Z" fill="#DFCA8D" fill-opacity="0.22"/><path d="M82 30 L72 58 M82 30 L92 58"/><path d="M70 58 Q82 66 94 58 Z" fill="#DFCA8D" fill-opacity="0.22"/></svg></div>
+      </div>
+
+      <!-- Moneda Metodología Der -->
+      <div class="accounting-motif motif-m23">
+        <div class="motif-float-pulse delay-4"><svg width="36" height="36" viewBox="0 0 70 70" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="35" cy="35" r="30" stroke-width="2"/><circle cx="35" cy="35" r="24" stroke-dasharray="3 3" opacity="0.7"/><circle cx="35" cy="35" r="18" fill="#DFCA8D" fill-opacity="0.22"/><path d="M35 22 v26 M39 26 h-7 a3 3 0 0 0 0 6 h6 a3 3 0 0 1 0 6 h-8" stroke-width="2.2"/></svg></div>
+      </div>
+
+      <!-- Ábaco Metodología Eje -->
+      <div class="accounting-motif motif-m24">
+        <div class="motif-float-vertical delay-3"><svg width="46" height="38" viewBox="0 0 90 70" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="74" height="50" rx="3"/><line x1="8" y1="28" x2="82" y2="28" stroke-width="2"/><line x1="24" y1="10" x2="24" y2="60"/><line x1="40" y1="10" x2="40" y2="60"/><line x1="56" y1="10" x2="56" y2="60"/><line x1="70" y1="10" x2="70" y2="60"/><circle cx="24" cy="20" r="3" fill="#DFCA8D"/><circle cx="40" cy="20" r="3" fill="#DFCA8D"/><circle cx="56" cy="16" r="3" fill="#DFCA8D"/><circle cx="70" cy="20" r="3" fill="#DFCA8D"/><circle cx="24" cy="40" r="3" fill="#B89B5E"/><circle cx="24" cy="48" r="3" fill="#B89B5E"/><circle cx="40" cy="44" r="3" fill="#B89B5E"/><circle cx="56" cy="52" r="3" fill="#B89B5E"/><circle cx="70" cy="40" r="3" fill="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Certificado Confianza Izq -->
+      <div class="accounting-motif motif-m25">
+        <div class="motif-float-sway-rev delay-2"><svg width="40" height="44" viewBox="0 0 70 80" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="8" width="46" height="54" rx="4" fill="#DFCA8D" fill-opacity="0.18"/><line x1="20" y1="18" x2="40" y2="18" stroke-width="1.8"/><line x1="20" y1="26" x2="50" y2="26" opacity="0.6"/><line x1="20" y1="32" x2="50" y2="32" opacity="0.6"/><line x1="20" y1="38" x2="42" y2="38" opacity="0.6"/><circle cx="35" cy="50" r="6" stroke-width="1.5" fill="#DFCA8D" fill-opacity="0.35"/><path d="M32 55 L28 68 L35 64 L42 68 L38 55" fill="#B89B5E" fill-opacity="0.4"/></svg></div>
+      </div>
+
+      <!-- Gráfica FAQ Der -->
+      <div class="accounting-motif motif-m26">
+        <div class="motif-float-vertical delay-4"><svg width="52" height="42" viewBox="0 0 120 90" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 15v65h90"/><line x1="15" y1="35" x2="105" y2="35" stroke-dasharray="3 3" opacity="0.6"/><line x1="15" y1="55" x2="105" y2="55" stroke-dasharray="3 3" opacity="0.6"/><rect x="25" y="50" width="13" height="30" rx="2" fill="#DFCA8D" fill-opacity="0.2"/><rect x="44" y="38" width="13" height="42" rx="2" fill="#DFCA8D" fill-opacity="0.25"/><rect x="63" y="26" width="13" height="54" rx="2" fill="#DFCA8D" fill-opacity="0.3"/><rect x="82" y="16" width="13" height="64" rx="2" fill="#DFCA8D" fill-opacity="0.35"/><path d="M31 48 Q50 34 69 24 T95 12" stroke="#DFCA8D" stroke-width="2.2"/><circle cx="31" cy="48" r="3" fill="#B89B5E"/><circle cx="50" cy="36" r="3" fill="#B89B5E"/><circle cx="69" cy="24" r="3" fill="#B89B5E"/><circle cx="88" cy="14" r="3" fill="#DFCA8D"/></svg></div>
+      </div>
+
+      <!-- Libro Mayor FAQ Centro -->
+      <div class="accounting-motif motif-m27">
+        <div class="motif-float-pulse delay-1"><svg width="50" height="40" viewBox="0 0 110 85" fill="none" stroke="#B89B5E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M55 20 Q30 14 10 18 v48 Q30 44 55 50 Q80 44 100 18 v48 Q80 64 55 70 Z" fill="#DFCA8D" fill-opacity="0.18"/><line x1="55" y1="20" x2="55" y2="70" stroke-width="2"/><line x1="18" y1="28" x2="48" y2="25" opacity="0.6"/><line x1="18" y1="36" x2="48" y2="33" opacity="0.6"/><line x1="18" y1="44" x2="48" y2="41" opacity="0.6"/><line x1="18" y1="52" x2="48" y2="49" opacity="0.6"/><line x1="62" y1="25" x2="92" y2="28" opacity="0.6"/><line x1="62" y1="33" x2="92" y2="36" opacity="0.6"/><line x1="62" y1="41" x2="92" y2="44" opacity="0.6"/><line x1="62" y1="49" x2="92" y2="52" opacity="0.6"/><path d="M55 20 Q58 35 62 55 L58 53 L54 58 Z" fill="#B89B5E" fill-opacity="0.35" stroke="none"/></svg></div>
+      </div>
+
+      <!-- Sello FAQ Izq -->
+      <div class="accounting-motif motif-m28">
+        <div class="motif-float-spin delay-3"><svg width="52" height="52" viewBox="0 0 100 100" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="50" r="44" stroke-width="1.8"/><circle cx="50" cy="50" r="38" stroke-dasharray="3 3" opacity="0.75"/><circle cx="50" cy="50" r="30" stroke-width="1.2" opacity="0.55"/><polygon points="50,26 53,36 63,33 58,41 67,46 58,51 63,60 53,56 50,66 47,56 37,60 42,51 33,46 42,41 37,33 47,36" fill="#DFCA8D" fill-opacity="0.22" stroke="#B89B5E" stroke-width="1.2"/><circle cx="50" cy="15" r="1.8" fill="#B89B5E"/><circle cx="50" cy="85" r="1.8" fill="#B89B5E"/><circle cx="15" cy="50" r="1.8" fill="#B89B5E"/><circle cx="85" cy="50" r="1.8" fill="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Lupa Contacto Centro -->
+      <div class="accounting-motif motif-m29">
+        <div class="motif-float-vertical delay-2"><svg width="40" height="40" viewBox="0 0 80 80" fill="none" stroke="#B89B5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="34" cy="34" r="22" stroke-width="2.2"/><circle cx="34" cy="34" r="17" stroke-dasharray="2 2" opacity="0.6" fill="#DFCA8D" fill-opacity="0.15"/><line x1="50" y1="50" x2="72" y2="72" stroke-width="4.5" stroke-linecap="round"/><path d="M26 34h16M34 26v16" stroke-width="1.5" opacity="0.7"/><circle cx="28" cy="28" r="2" fill="#B89B5E"/><circle cx="40" cy="40" r="2" fill="#B89B5E"/></svg></div>
+      </div>
+
+      <!-- Balanza Footer Der -->
+      <div class="accounting-motif motif-m30">
+        <div class="motif-float-sway delay-4"><svg width="54" height="54" viewBox="0 0 100 100" fill="none" stroke="#B89B5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M35 90h30M50 90V18M44 18h12M47 14h6"/><circle cx="50" cy="22" r="3.5" fill="#DFCA8D" fill-opacity="0.35"/><path d="M18 30 L50 22 L82 30"/><circle cx="18" cy="30" r="2" fill="#B89B5E"/><circle cx="82" cy="30" r="2" fill="#B89B5E"/><path d="M18 30 L8 58 M18 30 L28 58"/><path d="M6 58 Q18 66 30 58 Z" fill="#DFCA8D" fill-opacity="0.22"/><path d="M82 30 L72 58 M82 30 L92 58"/><path d="M70 58 Q82 66 94 58 Z" fill="#DFCA8D" fill-opacity="0.22"/></svg></div>
+      </div>
+
+      <!-- Micro-Símbolos Numéricos y de Fe Pública -->
+      <div class="accounting-motif motif-s01 sym-serif">
+        <div class="motif-float-pulse delay-2">Σ</div>
+      </div>
+
+      <div class="accounting-motif motif-s02 sym-serif">
+        <div class="motif-float-vertical delay-1">Δ</div>
+      </div>
+
+      <div class="accounting-motif motif-s03 sym-sans">
+        <div class="motif-float-pulse delay-3">%</div>
+      </div>
+
+      <div class="accounting-motif motif-s04 sym-serif">
+        <div class="motif-float-sway delay-4">$</div>
+      </div>
+
+      <div class="accounting-motif motif-s05 sym-sans">
+        <div class="motif-float-vertical delay-2">#</div>
+      </div>
+
+      <div class="accounting-motif motif-s06 sym-serif">
+        <div class="motif-float-pulse delay-1">≈</div>
+      </div>
+
+      <div class="accounting-motif motif-s07 sym-serif">
+        <div class="motif-float-pulse delay-3">Σ</div>
+      </div>
+
+      <div class="accounting-motif motif-s08 sym-serif">
+        <div class="motif-float-sway delay-2">$</div>
+      </div>
+
+      <div class="accounting-motif motif-s09 sym-serif">
+        <div class="motif-float-vertical delay-4">Δ</div>
+      </div>
+
+      <div class="accounting-motif motif-s10 sym-sans">
+        <div class="motif-float-pulse delay-1">%</div>
+      </div>
+
+      <div class="accounting-motif motif-s11 sym-serif">
+        <div class="motif-float-vertical delay-3">μ</div>
+      </div>
+
+      <div class="accounting-motif motif-s12 sym-serif">
+        <div class="motif-float-pulse delay-2">Ω</div>
+      </div>
+
+      <!-- Partículas Áureas Sutiles de Profundidad Multicapa -->
+      <div class="accounting-particle p01"></div>
+      <div class="accounting-particle p02"></div>
+      <div class="accounting-particle p03"></div>
+      <div class="accounting-particle p04"></div>
+      <div class="accounting-particle p05"></div>
+      <div class="accounting-particle p06"></div>
+      <div class="accounting-particle p07"></div>
+      <div class="accounting-particle p08"></div>
+      <div class="accounting-particle p09"></div>
+      <div class="accounting-particle p10"></div>
+      <div class="accounting-particle p11"></div>
+      <div class="accounting-particle p12"></div>
+    </div>
+
+    <!-- Navegación Superior -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#hero" class="brand-box">
+          <!-- Monograma 3D Oficial Angela Ramírez -->
+          <img src="public/logo-ar-3d.png" alt="Logo Oficial Angela Ramírez" style="height: 42px; width: auto; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(22,58,95,0.15));" />
+          <div class="brand-title-wrap">
+            <span class="b-name">ANGELA RAMÍREZ</span>
+            <span class="b-sub">CONTADORA PÚBLICA</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="#sobre-mi" class="nav-item">Sobre Mí</a>
+          <a href="#servicios" class="nav-item">Servicios</a>
+          <a href="#recursos-gratis" class="nav-item">Recursos Gratis</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <!-- Sección Hero Centrado Oficial -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container-fluid">
+        <!-- 1. Isotipo 3D Oficial Centrado -->
+        <div class="hero-logo-center">
+          <div class="logo-3d-halo">
+            <img 
+              src="public/logo-ar-3d.png" 
+              alt="Logotipo Oficial 3D de Angela Ramírez" 
+              class="hero-logo-img"
+            />
+          </div>
+        </div>
+
+        <!-- 2. Titular Tipográfico Oficial (Fiel a la marca) -->
+        <div class="hero-brand-lockup">
+          <h1 class="brand-hero-name">ANGELA RAMÍREZ</h1>
+
+          <div class="brand-sub-row">
+            <span class="decor-line"></span>
+            <span class="brand-sub-text">CONTADORA PÚBLICA</span>
+            <span class="decor-line"></span>
+          </div>
+
+          <p class="brand-slogan-text">TU INFORMACIÓN, EN BUENAS MANOS</p>
+        </div>
+
+        <!-- 3. MÓDULO DINÁMICO: Títulos de Servicios con Efecto Máquina de Escribir -->
+        <div class="hero-typewriter-container">
+          <h2 class="typewriter-headline" aria-label="Servicios Principales">
+            <span id="hero-typewriter-text" class="typewriter-text">Declaraciones de Renta de Personas Naturales y Jurídicas</span><span class="typewriter-cursor" aria-hidden="true">|</span>
+          </h2>
+        </div>
+
+        <!-- 4. Botón WhatsApp Exclusivo (Llamado a la acción de 3 palabras) con Borde Dorado Brillante -->
+        <div class="hero-actions-centered">
+          <a 
+            href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20agendar%20una%20consulta%20profesional." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-gold-glow"
+            aria-label="Hablemos por WhatsApp con Angela Ramírez"
+          >
+            <span class="btn-shine-sweep" aria-hidden="true"></span>
+            <svg class="wa-icon" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+            </svg>
+            <span class="btn-cta-text">Hablemos Por WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- 5. Métricas de Credibilidad (5 Highlights con Separación Ampliada) -->
+        <div class="metrics-row" style="width: 100%; margin-top: 3.5rem;">
+          <div>
+            <div class="metric-val">100%</div>
+            <div class="metric-tag">Independencia</div>
+            <p>Código de Ética IFAC y Ley 43</p>
+          </div>
+          <div>
+            <div class="metric-val">10+</div>
+            <div class="metric-tag">Años Experiencia</div>
+            <p>Empresas, personas y firmas</p>
+          </div>
+          <div>
+            <div class="metric-val">0 Sanciones</div>
+            <div class="metric-tag">Garantía Fe Pública</div>
+            <p>Historial intachable DIAN / JCC</p>
+          </div>
+          <div>
+            <div class="metric-val">Admisible</div>
+            <div class="metric-tag">Prueba Judicial</div>
+            <p>Código General del Proceso</p>
+          </div>
+          <div>
+            <div class="metric-val">+500</div>
+            <div class="metric-tag">Declaraciones Renta</div>
+            <p>Personas naturales y jurídicas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN SOBRE MÍ CON ANIMACIÓN AL SCROLL
+         ========================================================================== -->
+    <section id="sobre-mi" class="about-section scroll-reveal-section">
+      <div class="container">
+        
+        <!-- Encabezado de la Sección -->
+        <div class="about-header text-center">
+          <h2 class="about-main-title">
+            Angela María Ramírez Bedoya
+          </h2>
+          <p class="about-lead-subtitle">
+            Contadora Pública - Especialización en Revisoría Fiscal y Auditoria Forense
+          </p>
+          <div class="name-divider-track" aria-hidden="true">
+            <div class="name-divider-bar"></div>
+          </div>
+        </div>
+
+        <!-- Cuadrícula Principal de 2 Columnas -->
+        <div class="about-grid-main">
+          
+          <!-- Columna Izquierda: Tarjeta Editorial Sticky con Foto Real y Títulos de Estudio -->
+          <div class="about-sticky-sidebar">
+            <div class="about-profile-card reveal-left">
+              
+              <!-- Foto de Perfil con Halo Dorado -->
+              <div class="profile-photo-wrapper">
+                <div class="photo-glow-aura" aria-hidden="true"></div>
+                <img 
+                  src="public/angela-portrait.png" 
+                  alt="Angela María Ramírez Bedoya - Contadora Pública" 
+                  class="profile-photo-img"
+                />
+              </div>
+
+              <div class="profile-meta-block">
+                <h3 class="profile-card-name">Angela M. Ramírez</h3>
+                <p class="profile-card-role">Gestión Contable, Tributaria & Aseguramiento</p>
+                
+                <div class="profile-credentials-list">
+                  <div class="credential-item">
+                    <div class="cred-icon-gold" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                      </svg>
+                    </div>
+                    <span class="cred-title">Esp. en Revisoría Fiscal</span>
+                  </div>
+
+                  <div class="credential-item">
+                    <div class="cred-icon-gold" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                      </svg>
+                    </div>
+                    <span class="cred-title">Contaduría Pública</span>
+                  </div>
+
+                  <div class="credential-item">
+                    <div class="cred-icon-gold" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                      </svg>
+                    </div>
+                    <span class="cred-title">Diplomado en Revisoría Fiscal</span>
+                  </div>
+
+                  <div class="credential-item">
+                    <div class="cred-icon-gold" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B89B5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                      </svg>
+                    </div>
+                    <span class="cred-title">Diplomado en NIIF</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Resumen Profesional Ejecutivo y Enunciación de Logros -->
+          <div class="about-narrative-col reveal-right">
+            
+            <!-- Bloque de Perfil -->
+            <div class="about-bio-box">
+              <h3 class="bio-subtitle">Sólida Claridad Conceptual, Rigor Técnico y Solvencia Ética</h3>
+              <p class="bio-text">
+                Soy <strong>Angela María Ramírez Bedoya</strong>, Contadora Pública con más de una década de ejercicio profesional enfocado en el diseño, implementación y dirección de sistemas de información contable y controles internos que impulsan los objetivos organizacionales.
+              </p>
+              <p class="bio-text">
+                Mi práctica se fundamenta en el apego irrestricto a las <strong>Normas Internacionales de Información Financiera (NIIF)</strong> y <strong>Normas Internacionales de Auditoría (NIA)</strong>, garantizando a juntas directivas, consejos de administración y entes corporativos una administración financiera transparente, oportuna y libre de contingencias ante la DIAN y entidades de control.
+              </p>
+            </div>
+
+            <!-- Enunciación de Logros Profesionales Comprobados -->
+            <div class="achievements-container">
+              <h4 class="achievements-heading">
+                <span class="gold-bullet">◆</span> Logros Profesionales Destacados
+              </h4>
+
+              <div class="achievements-grid">
+                
+                <!-- Logro 1: Revisoría Fiscal y Auditoría NIAS -->
+                <div class="achieve-card">
+                  <div class="achieve-header">
+                    <span class="achieve-number">01</span>
+                    <h5 class="achieve-title">Revisoría Fiscal & Auditoría bajo NIAS</h5>
+                  </div>
+                  <p class="achieve-desc">
+                    En <strong>Servicios Integrales y Consultorías GZ S.A.S.</strong>, participación activa en la planeación y ejecución de auditorías financieras y de revisoría fiscal bajo <strong>Normas Internacionales de Auditoría (NIA)</strong>, asegurando transparencia, rigor técnico y mitigación preventiva de riesgos societarios.
+                  </p>
+                </div>
+
+                <!-- Logro 2: Cumplimiento Fiscal y Fiscalización DIAN -->
+                <div class="achieve-card">
+                  <div class="achieve-header">
+                    <span class="achieve-number">02</span>
+                    <h5 class="achieve-title">Cumplimiento Tributario & Cero Sanciones</h5>
+                  </div>
+                  <p class="achieve-desc">
+                    Supervisión contable integral y elaboración de declaraciones fiscales nacionales y municipales (IVA, Renta, Retención en la fuente, Régimen Simple - RST, ReteICA) en compañías como <strong>SINTECOL S.A.S.</strong> e <strong>Inversiones BEPIR S.A.S.</strong>, con acompañamiento exitoso en procesos de fiscalización ante la DIAN.
+                  </p>
+                </div>
+
+                <!-- Logro 3: Transformación Digital e Implementación Electrónica -->
+                <div class="achieve-card">
+                  <div class="achieve-header">
+                    <span class="achieve-number">03</span>
+                    <h5 class="achieve-title">Facturación & Nómina Electrónica DIAN</h5>
+                  </div>
+                  <p class="achieve-desc">
+                    Liderazgo en la parametrización, habilitación y puesta en marcha de documentos electrónicos (facturación y nómina electrónica), estableciendo manuales de procedimiento, registro oportuno de operaciones y reportes fidedignos para entidades reguladoras.
+                  </p>
+                </div>
+
+                <!-- Logro 4: Control Interno y Finanzas en Propiedad Horizontal -->
+                <div class="achieve-card">
+                  <div class="achieve-header">
+                    <span class="achieve-number">04</span>
+                    <h5 class="achieve-title">Control Presupuestal en Copropiedades (P.H.)</h5>
+                  </div>
+                  <p class="achieve-desc">
+                    En <strong>La Gran Reserva Río P.H.</strong>, implementación de controles internos para la adecuada gestión de ingresos y gastos, coordinación de cartera con recaudo oportuno y sustentación periódica de informes financieros ante el Consejo de Administración y Revisoría Fiscal.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Recuadro de Cierre Editorial de Confianza (Ancho Completo de la Hoja) -->
+        <div class="about-cta-footer reveal-up">
+          <p class="cta-quote">
+            &ldquo;Generadora de valor empresarial, rigor probatorio y fe pública ética al servicio de su tranquilidad.&rdquo;
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS: 4 EJES CENTRALES -->
+    <section id="servicios" class="section-wrap bg-white scroll-reveal-section services-section-compact">
+      <div class="container">
+        <div class="text-center reveal-item">
+          <h2 class="section-h2">Servicios Contables y de Aseguramiento</h2>
+          <div class="services-divider-track" aria-hidden="true">
+            <div class="services-divider-bar"></div>
+          </div>
+        </div>
+
+        <!-- Tarjeta Unificada con Navegación Interna -->
+        <div class="services-unified-card reveal-up">
+          <!-- Pestañas de los 4 Ejes Centrales DENTRO de la Tarjeta -->
+          <div class="card-tabs-nav" role="tablist">
+            <button class="t-btn active" onclick="switchTab(0)">Revisoría Fiscal</button>
+            <button class="t-btn" onclick="switchTab(1)">Auditoría Financiera, Interna y Forense</button>
+            <button class="t-btn" onclick="switchTab(2)">Control Interno y Gestión de Riesgos</button>
+            <button class="t-btn" onclick="switchTab(3)">Impuestos y Cumplimiento Tributario</button>
+          </div>
+
+          <!-- Contenedor de Paneles de Servicio -->
+          <div class="services-panels-container">
+            <!-- Eje 1: Revisoría Fiscal -->
+            <div class="service-panel active" id="tab-0">
+          <div class="axis-header">
+            <h3 class="axis-title">Revisoría Fiscal</h3>
+            <p class="axis-tagline">Vigilancia societaria, evaluación de control interno y dictamen con fe pública.</p>
+            <p class="axis-summary">Órgano de fiscalización permanente e independiente que dictamina los estados financieros bajo normas NIAS, evalúa la eficacia del control interno y asegura el cumplimiento estricto ante la DIAN, Cámaras de Comercio y Superintendencias en el Eje Cafetero y Norte del Valle.</p>
+          </div>
+
+          <div class="subservices-grid">
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Cumplimiento normativo y legal</h4>
+              <p class="subservice-desc">Monitoreo continuo y verificación del cumplimiento estatutario, comercial, tributario y laboral de la entidad ante entes de control.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Evaluación control interno</h4>
+              <p class="subservice-desc">Revisión crítica de las políticas y procedimientos operativos, identificando debilidades y emitiendo cartas de recomendaciones oportunas.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Dictámenes</h4>
+              <p class="subservice-desc">Emisión de dictámenes profesionales independientes sobre Estados Financieros anuales e intermedios bajo normas NIAS.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Trabajos de aseguramiento</h4>
+              <p class="subservice-desc">Procedimientos acordados de revisión y verificación de información financiera histórica y proyectada para juntas directivas.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Certificaciones</h4>
+              <p class="subservice-desc">Expedición de certificaciones con fe pública contable para licitaciones, entidades bancarias y autoridades gubernamentales.</p>
+            </div>
+          </div>
+
+          <div class="axis-bottom-bar">
+            <div class="axis-legal-box">
+              <div class="axis-legal-title">Sustento Legal & Normativa Aplicable</div>
+              <div class="axis-legal-text">Código de Comercio (Art. 203 - 217) · Ley 43 de 1990 · Normas Internacionales de Auditoría (NIAS - Decreto 2420/2015).</div>
+            </div>
+            <div class="axis-cta-wrap">
+              <a href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20una%20propuesta%20de%20Revisor%C3%ADa%20Fiscal%20para%20mi%20empresa%20en%20el%20Eje%20Cafetero%20y%20Norte%20del%20Valle." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Solicitar Propuesta de Revisoría Fiscal
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Eje 2: Auditoría Financiera, Interna y Forense -->
+        <div class="service-panel" id="tab-1">
+          <div class="axis-header">
+            <h3 class="axis-title">Auditoría Financiera, Interna y Forense</h3>
+            <p class="axis-tagline">Detección de anomalías, investigación de fraudes y dictámenes periciales con validez probatoria.</p>
+            <p class="axis-summary">Examinación crítica de registros contables, detección e investigación profunda de actos de fraude corporativo, apropiaciones indebidas y estructuración de dictámenes periciales técnicos para despachos judiciales y tribunales de arbitramento.</p>
+          </div>
+
+          <div class="subservices-grid">
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Evaluación preliminar</h4>
+              <p class="subservice-desc">Diagnóstico inicial confidencial y delimitación precisa del alcance investigativo sin alertar a los involucrados.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Análisis documental</h4>
+              <p class="subservice-desc">Inspección minuciosa de soportes contables, conciliaciones bancarias, contratos y trazabilidad de transacciones atípicas.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Investigación de fraude y corrupción</h4>
+              <p class="subservice-desc">Identificación técnica de apropiaciones indebidas, conflictos de interés, falsedad documental y esquemas de desvío de capital.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Elaboración de informes periciales</h4>
+              <p class="subservice-desc">Construcción de dictámenes periciales bajo el Código General del Proceso (CGP) con cuantificación rigurosa del daño emergente y lucro cesante.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Documentación de hallazgos</h4>
+              <p class="subservice-desc">Consolidación de pruebas documentales bajo estricta cadena de custodia admisibles ante tribunales y juzgados.</p>
+            </div>
+          </div>
+
+          <div class="axis-bottom-bar">
+            <div class="axis-legal-box">
+              <div class="axis-legal-title">Marco Legal & Estándares Probatorios</div>
+              <div class="axis-legal-text">Estándares Internacionales ACFE · Ley 1564 de 2012 (CGP Art. 226 a 235) · Circular Externa 100-000016 SuperSociedades (SAGRILAFT / PTEE).</div>
+            </div>
+            <div class="axis-cta-wrap">
+              <a href="https://wa.me/573105274367?text=Hola%20Angela,%20requiero%20asesor%C3%ADa%20especializada%20en%20Auditor%C3%ADa%20Financiera,%20Interna%20o%20Forense." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Solicitar Investigación Forense o Peritaje
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Eje 3: Control Interno y Gestión de Riesgos -->
+        <div class="service-panel" id="tab-2">
+          <div class="axis-header">
+            <h3 class="axis-title">Control Interno y Gestión de Riesgos</h3>
+            <p class="axis-tagline">Diagnóstico de sistemas de control, evaluación de terceros y mitigación de riesgos tecnológicos.</p>
+            <p class="axis-summary">Diseño, supervisión y fortalecimiento de la arquitectura de control interno para proteger los activos empresariales, optimizar la eficiencia operativa y prevenir contingencias operativas, cibernéticas y regulatorias.</p>
+          </div>
+
+          <div class="subservices-grid">
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Diagnóstico y evaluación del sistema de control</h4>
+              <p class="subservice-desc">Valoración integral del ambiente de control bajo metodología COSO, detectando brechas y áreas de vulnerabilidad.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Evaluación de eficiencia operativa</h4>
+              <p class="subservice-desc">Análisis de procesos clave para eliminar cuellos de botella, duplicidad de funciones y sobrecostos operativos.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Evaluación de controles de terceros</h4>
+              <p class="subservice-desc">Auditoría de proveedores críticos, aliados comerciales y esquemas de tercerización (BPO) para blindar la operación.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Identificación y valoración de riesgos</h4>
+              <p class="subservice-desc">Construcción y actualización de matrices de riesgo corporativo, probabilidad de ocurrencia e impacto financiero.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Ciberseguridad y riesgo tecnológico</h4>
+              <p class="subservice-desc">Revisión de controles sobre accesos a sistemas contables/ERP, integridad de bases de datos y seguridad de la información financiera.</p>
+            </div>
+          </div>
+
+          <div class="axis-bottom-bar">
+            <div class="axis-legal-box">
+              <div class="axis-legal-title">Metodología & Buenas Prácticas</div>
+              <div class="axis-legal-text">Marco Integrado COSO 2013 · Normas Técnicas ISO 31000 · Circular Básica Jurídica SuperSociedades sobre Control Interno.</div>
+            </div>
+            <div class="axis-cta-wrap">
+              <a href="https://wa.me/573105274367?text=Hola%20Angela,%20me%20interesa%20un%20diagn%C3%B3stico%20de%20Control%20Interno%20y%20Gesti%C3%B3n%20de%20Riesgos%20para%20mi%20organizaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Solicitar Diagnóstico de Control Interno
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Eje 4: Impuestos y Cumplimiento Tributario -->
+        <div class="service-panel" id="tab-3">
+          <div class="axis-header">
+            <h3 class="axis-title">Impuestos y Cumplimiento Tributario</h3>
+            <p class="axis-tagline">Planeación tributaria preventiva, atención fiscal DIAN y gestión de saldos a favor.</p>
+            <p class="axis-summary">Acompañamiento fiscal estratégico para optimizar legítimamente la carga impositiva, asegurar la presentación impecable de obligaciones ante la DIAN y entes municipales, y defender con solidez técnica ante fiscalizaciones.</p>
+          </div>
+
+          <div class="subservices-grid">
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Diagnóstico tributario preventivo</h4>
+              <p class="subservice-desc">Auditoría previa a declaraciones para detectar inconsistencias y corregir desviaciones antes de fiscalizaciones de la DIAN.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Planeación tributaria estratégica</h4>
+              <p class="subservice-desc">Proyección anual estructurada de la carga fiscal aprovechando deducciones, exenciones y beneficios legales vigentes.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Preparación y presentación de declaraciones (Outsourcing tributario)</h4>
+              <p class="subservice-desc">Liquidación y presentación oportuna de Renta, IVA, Retención en la fuente, ICA territorial e Información Exógena.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Atención de requerimientos y fiscalización DIAN</h4>
+              <p class="subservice-desc">Respuestas técnicas y fundamentadas a emplazamientos, requerimientos ordinarios y pliegos de cargos de la DIAN.</p>
+            </div>
+
+            <div class="subservice-card">
+              <div class="subservice-top">
+                <svg class="subservice-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <h4 class="subservice-title">Gestión de saldos a favor y devoluciones</h4>
+              <p class="subservice-desc">Trámite integral de solicitudes de devolución y compensación de saldos ante la DIAN y municipios con estricto soporte documental.</p>
+            </div>
+          </div>
+
+          <div class="axis-bottom-bar">
+            <div class="axis-legal-box">
+              <div class="axis-legal-title">Normativa Tributaria Colombiana</div>
+              <div class="axis-legal-text">Estatuto Tributario Nacional (Decreto 624/1989 y reformas) · Estatutos Tributarios Municipales (Pereira, Cartago, La Virginia, Dosquebradas) · Resoluciones DIAN.</div>
+            </div>
+            <div class="axis-cta-wrap">
+              <a href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20agendar%20una%20consulta%20sobre%20Impuestos%20y%20Cumplimiento%20Tributario." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Solicitar Asesoría Tributaria Estratégica
+              </a>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.services-panels-container -->
+    </div><!-- /.services-unified-card -->
+  </div><!-- /.container -->
+</section>
+
+    <!-- ==========================================================================
+         SECCIÓN RECURSOS GRATIS
+         ========================================================================== -->
+    <section id="recursos-gratis" class="section-wrap bg-white scroll-reveal-section">
+      <div class="container">
+        <div class="text-center reveal-item">
+          <h2 class="section-h2">Recursos Gratuitos para su Empresa & Finanzas</h2>
+          <div class="services-divider-track" aria-hidden="true">
+            <div class="services-divider-bar"></div>
+          </div>
+          <p style="max-width: 780px; margin: 0 auto; color: #556677; font-size: 1.05rem; line-height: 1.65;">
+            Herramientas prácticas, modelos formulados y guías normativas actualizadas conforme a la legislación contable y tributaria de Colombia, diseñadas para fortalecer la gestión y el control de su organización.
+          </p>
+        </div>
+
+        <div class="resources-grid reveal-up">
+          <!-- Recurso 1: Calendario Tributario -->
+          <article class="resource-card">
+            <div>
+              <div class="resource-top-meta">
+                <div class="resource-icon-box" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                    <path d="M8 14h.01"></path>
+                    <path d="M12 14h.01"></path>
+                    <path d="M16 14h.01"></path>
+                    <path d="M8 18h.01"></path>
+                    <path d="M12 18h.01"></path>
+                    <path d="M16 18h.01"></path>
+                  </svg>
+                </div>
+                <span class="badge badge-gold">ACTUALIZADO 2026</span>
+              </div>
+              <h3 class="resource-card-title">Calendario Tributario 2026</h3>
+              <p class="resource-card-desc">
+                Cronograma consolidado de vencimientos DIAN y distritales (Renta PN y PJ, IVA, Retención en la fuente e ICA en Cali, Medellín y Bogotá) para evitar sanciones y extemporaneidades.
+              </p>
+            </div>
+            <div>
+              <div class="resource-format-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span>PDF Interactivo · Descarga Inmediata</span>
+              </div>
+              <div style="margin-top: 1.2rem;">
+                <a href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20obtener%20el%20Calendario%20Tributario%202026." target="_blank" rel="noopener noreferrer" class="resource-btn">
+                  <span>Descargar Calendario</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Recurso 2: Plantilla Diagnóstico Control Interno -->
+          <article class="resource-card">
+            <div>
+              <div class="resource-top-meta">
+                <div class="resource-icon-box" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+                <span class="badge badge-gold">EXCEL FORMULADO</span>
+              </div>
+              <h3 class="resource-card-title">Diagnóstico Control Interno & SAGRILAFT</h3>
+              <p class="resource-card-desc">
+                Matriz parametrizada para autoevaluar riesgos corporativos, segregación funcional y preparación ante requerimientos de Superintendencias y normatividad antilavado.
+              </p>
+            </div>
+            <div>
+              <div class="resource-format-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                <span>Plantilla Excel (.xlsx) · Parametrizada</span>
+              </div>
+              <div style="margin-top: 1.2rem;">
+                <a href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20recibir%20la%20Plantilla%20de%20Diagn%C3%B3stico%20de%20Control%20Interno%20y%20SAGRILAFT." target="_blank" rel="noopener noreferrer" class="resource-btn">
+                  <span>Solicitar Plantilla</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Recurso 3: Guía Cierre Contable NIIF -->
+          <article class="resource-card">
+            <div>
+              <div class="resource-top-meta">
+                <div class="resource-icon-box" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                </div>
+                <span class="badge badge-gold">GUÍA TÉCNICA</span>
+              </div>
+              <h3 class="resource-card-title">Guía de Cierre Contable & Revelaciones</h3>
+              <p class="resource-card-desc">
+                Lista de 25 puntos críticos bajo NIIF (deterioro de cartera, inventarios, provisiones y notas explicativas) para garantizar dictámenes sin salvedades y estados financieros fidedignos.
+              </p>
+            </div>
+            <div>
+              <div class="resource-format-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Manual Técnico PDF · Grupos 1 y 2</span>
+              </div>
+              <div style="margin-top: 1.2rem;">
+                <a href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20descargar%20la%20Gu%C3%ADa%20de%20Cierre%20Contable%20NIIF." target="_blank" rel="noopener noreferrer" class="resource-btn">
+                  <span>Descargar Guía NIIF</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Recurso 4: Checklist Documental Renta -->
+          <article class="resource-card">
+            <div>
+              <div class="resource-top-meta">
+                <div class="resource-icon-box" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                </div>
+                <span class="badge badge-gold">CHECKLIST 2026</span>
+              </div>
+              <h3 class="resource-card-title">Checklist Documental Declaración Renta</h3>
+              <p class="resource-card-desc">
+                Relación detallada de certificados tributarios, extractos financieros y soportes probatorios indispensables para la depuración del impuesto de renta sin objeciones por parte de la DIAN.
+              </p>
+            </div>
+            <div>
+              <div class="resource-format-tag">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="m9 15 2 2 4-4"></path></svg>
+                <span>Checklist Verificado · Personas & Empresas</span>
+              </div>
+              <div style="margin-top: 1.2rem;">
+                <a href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20el%20Checklist%20Documental%20para%20Declaraci%C3%B3n%20de%20Renta." target="_blank" rel="noopener noreferrer" class="resource-btn">
+                  <span>Obtener Checklist</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Banner de Acompañamiento Estratégico al Pie -->
+        <div class="resources-consultancy-banner reveal-up">
+          <div class="banner-content">
+            <h4>¿Requiere acompañamiento especializado para aplicar estas herramientas?</h4>
+            <p>Agende una conversación estratégica confidencial para evaluar las necesidades contables, tributarias o de control interno de su organización.</p>
+          </div>
+          <a href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20agendar%20una%20consulta%20estrat%C3%A9gica." target="_blank" rel="noopener noreferrer" class="btn btn-gold banner-action-btn">
+            Conversar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-wrap">
+      <div class="container text-center">
+        <h3 class="footer-brand-title">Angela Ramírez · Contadora Pública</h3>
+        <p class="footer-slogan">TU INFORMACIÓN, EN BUENAS MANOS</p>
+        
+        <!-- Línea Dorada: 50% del ancho de pantalla animada desde los extremos hacia el centro -->
+        <div class="footer-gold-divider" aria-hidden="true">
+          <div class="footer-gold-track"></div>
+          <div class="gold-stream-left"></div>
+          <div class="gold-stream-right"></div>
+          <div class="gold-center-node"></div>
+        </div>
+
+        <!-- Ubicaciones: Eje Cafetero y Norte del Valle -->
+        <div class="footer-locations">
+          <span class="footer-loc-item">
+            <svg class="loc-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Eje Cafetero
+          </span>
+          <span class="footer-loc-sep" aria-hidden="true">·</span>
+          <span class="footer-loc-item">
+            <svg class="loc-pin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Norte del Valle
+          </span>
+        </div>
+
+        <p class="footer-copy">
+          © 2026 Angela Ramírez · Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Botón Flotante Permanente: Azul Corporativo con Borde Dorado Animado y WhatsApp "HABLEMOS" -->
+    <aside class="floating-contact-wrap" aria-label="Contacto directo por WhatsApp">
+      <a 
+        href="https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20agendar%20una%20consulta%20profesional." 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="floating-contact-btn"
+        aria-label="Hablemos por WhatsApp con Angela Ramírez"
+      >
+        <span class="floating-border-anim" aria-hidden="true"></span>
+        <span class="floating-shine" aria-hidden="true"></span>
+        <span class="floating-pulse-ring" aria-hidden="true"></span>
+        <div class="floating-icon-wrap" aria-hidden="true">
+          <svg class="floating-wa-icon" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.144.39-.086s1.011.477 1.184.564.289.13.332.203c.043.072.043.419-.101.824z"/>
+          </svg>
+          <span class="floating-online-dot"></span>
+        </div>
+        <span class="floating-label">HABLEMOS</span>
+      </a>
+    </aside>
+
+    <!-- SCRIPTS INTERACTIVOS -->
+    <script>
+      // 1. Puntero Dinámico Sutil
+      const dot = document.getElementById('cursor-dot');
+      const follower = document.getElementById('cursor-follower');
+      let mouseX = -100, mouseY = -100, folX = -100, folY = -100;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+      });
+
+      function animCursor() {
+        folX += (mouseX - folX) * 0.18;
+        folY += (mouseY - folY) * 0.18;
+        follower.style.transform = `translate(${folX}px, ${folY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(animCursor);
+      }
+      requestAnimationFrame(animCursor);
+
+      document.querySelectorAll('a, button, input, select, .hero-card, .resource-card, .service-panel').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+
+      // 2. Cambio de Pestañas de Servicios
+      function switchTab(index) {
+        document.querySelectorAll('.t-btn').forEach((b, i) => {
+          b.classList.toggle('active', i === index);
+        });
+        document.querySelectorAll('.service-panel').forEach((p, i) => {
+          p.classList.toggle('active', i === index);
+        });
+      }
+
+      // 5. Efecto Máquina de Escribir (Typewriter) en los Títulos del Hero
+      const typewriterTitles = [
+        "Declaraciones de Renta de Personas Naturales y Jurídicas",
+        "Revisoría Fiscal",
+        "Asesoría Tributaria, Contable y Financiera",
+        "Auditoría Financiera",
+        "Constitución de Empresas y Sociedades"
+      ];
+
+      function initPreviewTypewriter() {
+        const textEl = document.getElementById('hero-typewriter-text');
+        if (!textEl) return;
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+          let staticIdx = 0;
+          setInterval(() => {
+            staticIdx = (staticIdx + 1) % typewriterTitles.length;
+            textEl.textContent = typewriterTitles[staticIdx];
+          }, 4000);
+          return;
+        }
+
+        let titleIndex = 0;
+        let charIndex = typewriterTitles[0].length;
+        let isDeleting = true;
+        let timeoutId = null;
+
+        const TYPING_SPEED = 36;
+        const DELETING_SPEED = 18;
+        const PAUSE_TYPED = 1600;
+        const PAUSE_DELETED = 300;
+
+        function tick() {
+          const currentTitle = typewriterTitles[titleIndex];
+
+          if (isDeleting) {
+            charIndex--;
+            textEl.textContent = currentTitle.substring(0, charIndex);
+
+            if (charIndex <= 0) {
+              isDeleting = false;
+              titleIndex = (titleIndex + 1) % typewriterTitles.length;
+              timeoutId = setTimeout(tick, PAUSE_DELETED);
+              return;
+            }
+            timeoutId = setTimeout(tick, DELETING_SPEED);
+          } else {
+            charIndex++;
+            textEl.textContent = currentTitle.substring(0, charIndex);
+
+            if (charIndex >= currentTitle.length) {
+              isDeleting = true;
+              timeoutId = setTimeout(tick, PAUSE_TYPED);
+              return;
+            }
+            const jitter = Math.random() * 12 - 6;
+            timeoutId = setTimeout(tick, Math.max(16, TYPING_SPEED + jitter));
+          }
+        }
+
+        timeoutId = setTimeout(tick, PAUSE_TYPED);
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            if (timeoutId) clearTimeout(timeoutId);
+          } else {
+            timeoutId = setTimeout(tick, 600);
+          }
+        });
+      }
+
+      function syncNameDividerWidth() {
+        const title = document.querySelector('.about-main-title');
+        const track = document.querySelector('.name-divider-track');
+        if (!title || !track) return;
+
+        const setWidth = () => {
+          const width = title.offsetWidth;
+          if (width > 0) {
+            track.style.width = width + 'px';
+          }
+        };
+
+        setWidth();
+
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(setWidth);
+        }
+
+        if (window.ResizeObserver) {
+          const ro = new ResizeObserver(() => setWidth());
+          ro.observe(title);
+        } else {
+          window.addEventListener('resize', setWidth);
+        }
+      }
+
+      function setupAboutScrollReveal() {
+        syncNameDividerWidth();
+
+        const sections = document.querySelectorAll('.scroll-reveal-section');
+        if (!sections.length) return;
+
+        // Accesibilidad: respetar reducción de movimiento
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+          sections.forEach(sec => sec.classList.add('is-visible'));
+          return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        sections.forEach(sec => observer.observe(sec));
+      }
+
+      function initAccountingBackground() {
+        const bg = document.getElementById('corporate-accounting-bg');
+        if (!bg) return;
+
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) return;
+
+        let ticking = false;
+        let scrollTimeout = null;
+
+        const updateScroll = () => {
+          const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+          document.documentElement.style.setProperty('--bg-scroll', scrollY);
+          document.documentElement.style.setProperty('--bg-scroll-y', `${scrollY}px`);
+          
+          bg.classList.add('is-scrolling');
+          
+          if (scrollTimeout) clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            bg.classList.remove('is-scrolling');
+          }, 240);
+          
+          ticking = false;
+        };
+
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(updateScroll);
+            ticking = true;
+          }
+        }, { passive: true });
+
+        updateScroll();
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+          initPreviewTypewriter();
+          setupAboutScrollReveal();
+          initAccountingBackground();
+        });
+      } else {
+        initPreviewTypewriter();
+        setupAboutScrollReveal();
+        initAccountingBackground();
+      }
+    </script>
+  </body>
+</html>

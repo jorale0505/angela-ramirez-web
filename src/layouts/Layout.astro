@@ -1,0 +1,157 @@
+---
+import '../styles/global.css';
+import CustomCursor from '../components/CustomCursor.astro';
+import AccountingBackground from '../components/AccountingBackground.astro';
+import FloatingContact from '../components/FloatingContact.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = "Angela Ramírez | Contadora Pública · Revisoría Fiscal y Auditoría Forense · Cali",
+  description = "Servicios profesionales de Revisoría Fiscal, Auditoría Forense, Peritaje Contable y Planeación Tributaria en Cali y Colombia. Tu información, en buenas manos.",
+  image = "/og-image.png",
+} = Astro.props;
+
+const siteUrl = Astro.site?.toString() || "https://angelaramirez.github.io";
+const canonicalURL = new URL(Astro.url.pathname, siteUrl);
+
+// Estructura Schema.org para posicionamiento local y profesional
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      "name": "Angela Ramírez",
+      "jobTitle": "Contadora Pública y Auditora Forense",
+      "description": "Especialista en Revisoría Fiscal, Auditoría Forense y Peritaje Contable Judicial.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cali",
+        "addressRegion": "Valle del Cauca",
+        "addressCountry": "CO"
+      },
+      "telephone": "+573001234567",
+      "email": "contacto@angelaramirezcontadora.com",
+      "url": siteUrl
+    },
+    {
+      "@type": "AccountingService",
+      "@id": `${siteUrl}/#organization`,
+      "name": "Angela Ramírez · Revisoría Fiscal & Auditoría Forense",
+      "url": siteUrl,
+      "logo": `${siteUrl}/favicon.svg`,
+      "image": `${siteUrl}${image}`,
+      "telephone": "+573001234567",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cali",
+        "addressRegion": "Valle del Cauca",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "3.4516",
+        "longitude": "-76.5320"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Cali" },
+        { "@type": "State", "name": "Valle del Cauca" },
+        { "@type": "Country", "name": "Colombia" }
+      ]
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Primario -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="author" content="Angela Ramírez" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteUrl}${image}`} />
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={`${siteUrl}${image}`} />
+
+    <!-- Preconexión de Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Datos Estructurados JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <!-- Fondo Corporativo Estático y Animado al Scroll -->
+    <AccountingBackground />
+
+    <!-- Puntero Dinámico Sutil -->
+    <CustomCursor />
+
+    <slot />
+
+    <!-- Botón Flotante Permanente de Contacto Directo WhatsApp -->
+    <FloatingContact />
+
+    <!-- Observador de animaciones de scroll sutiles -->
+    <script>
+      function setupScrollAnimations() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px',
+          }
+        );
+
+        document.querySelectorAll('.fade-up').forEach((el) => {
+          observer.observe(el);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupScrollAnimations);
+      } else {
+        setupScrollAnimations();
+      }
+    </script>
+  </body>
+</html>

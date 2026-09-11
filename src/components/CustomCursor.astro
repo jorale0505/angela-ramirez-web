@@ -1,0 +1,153 @@
+---
+// CustomCursor.astro - Puntero dinámico sutil y elegante con física amortiguada
+---
+
+<div id="custom-cursor-container" aria-hidden="true">
+  <div id="cursor-dot"></div>
+  <div id="cursor-follower"></div>
+</div>
+
+<style>
+  #custom-cursor-container {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    overflow: hidden;
+    transition: opacity 0.4s ease;
+  }
+
+  #cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 7px;
+    background-color: var(--color-gold-champagne, #B89B5E);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100000;
+    transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+    box-shadow: 0 0 8px rgba(184, 155, 94, 0.6);
+  }
+
+  #cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid rgba(184, 155, 94, 0.55);
+    background: radial-gradient(circle, rgba(184, 155, 94, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 99999;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.3s ease, 
+                background-color 0.3s ease;
+  }
+
+  /* Estado al pasar sobre enlaces, botones y tarjetas interactivas */
+  body.cursor-hover #cursor-follower {
+    width: 54px;
+    height: 54px;
+    border-color: rgba(184, 155, 94, 0.95);
+    background: radial-gradient(circle, rgba(184, 155, 94, 0.16) 0%, rgba(22, 58, 95, 0.05) 80%);
+    backdrop-filter: blur(1px);
+  }
+
+  body.cursor-hover #cursor-dot {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #DFCA8D;
+  }
+
+  /* Ocultar en dispositivos táctiles o si el usuario prefiere movimiento reducido */
+  @media (pointer: coarse), (hover: none), (prefers-reduced-motion: reduce) {
+    #custom-cursor-container {
+      display: none !important;
+    }
+  }
+</style>
+
+<script>
+  function initCustomCursor() {
+    // Si la pantalla es táctil o se prefiere movimiento reducido, salir
+    if (window.matchMedia('(pointer: coarse)').matches || 
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    const dot = document.getElementById('cursor-dot');
+    const follower = document.getElementById('cursor-follower');
+    if (!dot || !follower) return;
+
+    let mouseX = -100;
+    let mouseY = -100;
+    let followerX = -100;
+    let followerY = -100;
+    let isVisible = false;
+
+    // Seguimiento del mouse
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+      if (!isVisible) {
+        isVisible = true;
+        followerX = mouseX;
+        followerY = mouseY;
+        dot.style.opacity = '1';
+        follower.style.opacity = '1';
+      }
+
+      // El punto central se mueve instantáneamente con el hardware
+      dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+    }, { passive: true });
+
+    // Animación suave del aro seguidor mediante LERP (física sutil amortiguada)
+    function animate() {
+      // Lerp con factor 0.18 para suavidad y dinamismo sin lag
+      followerX += (mouseX - followerX) * 0.18;
+      followerY += (mouseY - followerY) * 0.18;
+
+      follower.style.transform = `translate(${followerX}px, ${followerY}px) translate(-50%, -50%)`;
+      requestAnimationFrame(animate);
+    }
+    requestAnimationFrame(animate);
+
+    // Detección de elementos interactivos para magnificar el cursor
+    function attachHoverListeners() {
+      const interactives = document.querySelectorAll('a, button, input, select, textarea, .card-premium, .interactive-hover');
+      interactives.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'), { passive: true });
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'), { passive: true });
+      });
+    }
+
+    attachHoverListeners();
+
+    // Re-vincular en caso de mutaciones dinámicas en el DOM
+    const observer = new MutationObserver(() => attachHoverListeners());
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    // Ocultar cursor al salir de la ventana
+    document.addEventListener('mouseleave', () => {
+      dot.style.opacity = '0';
+      follower.style.opacity = '0';
+      isVisible = false;
+    });
+  }
+
+  // Inicializar al cargar el DOM
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCustomCursor);
+  } else {
+    initCustomCursor();
+  }
+</script>

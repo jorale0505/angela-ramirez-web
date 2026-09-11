@@ -1,0 +1,381 @@
+---
+import { freeResourcesData, siteConfig } from '../data/content';
+---
+
+<section id="recursos-gratis" class="section-wrap bg-white scroll-reveal-section">
+  <div class="container">
+    <div class="text-center reveal-item">
+      <h2 class="section-h2">Recursos Gratuitos para su Empresa & Finanzas</h2>
+      <div class="services-divider-track" aria-hidden="true">
+        <div class="services-divider-bar"></div>
+      </div>
+      <p class="section-subtitle">
+        Herramientas prácticas, modelos formulados y guías normativas actualizadas conforme a la legislación contable y tributaria de Colombia, diseñadas para fortalecer la gestión y el control de su organización.
+      </p>
+    </div>
+
+    <div class="resources-grid reveal-up">
+      {freeResourcesData.map((resource) => (
+        <article class="resource-card" id={`resource-${resource.id}`}>
+          <div>
+            <div class="resource-top-meta">
+              <div class="resource-icon-box" aria-hidden="true">
+                {resource.iconType === 'calendar' && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                    <path d="M8 14h.01"></path>
+                    <path d="M12 14h.01"></path>
+                    <path d="M16 14h.01"></path>
+                    <path d="M8 18h.01"></path>
+                    <path d="M12 18h.01"></path>
+                    <path d="M16 18h.01"></path>
+                  </svg>
+                )}
+                {resource.iconType === 'shield' && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                )}
+                {resource.iconType === 'book' && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                  </svg>
+                )}
+                {resource.iconType === 'checklist' && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 11 12 14 22 4"></polyline>
+                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                  </svg>
+                )}
+              </div>
+              <span class="badge badge-gold">{resource.badge}</span>
+            </div>
+            <h3 class="resource-card-title">{resource.title}</h3>
+            <p class="resource-card-desc">{resource.description}</p>
+          </div>
+
+          <div>
+            <div class="resource-format-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+              <span>{resource.formatText}</span>
+            </div>
+
+            <div class="resource-btn-wrap">
+              <a 
+                href={`https://wa.me/${siteConfig.phoneClean}?text=${encodeURIComponent(resource.whatsappMessage)}`} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="resource-btn"
+              >
+                <span>{resource.buttonText}</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Banner de Acompañamiento Estratégico al Pie -->
+    <div class="resources-consultancy-banner reveal-up">
+      <div class="banner-content">
+        <h4>¿Requiere acompañamiento especializado para aplicar estas herramientas?</h4>
+        <p>Agende una conversación estratégica confidencial para evaluar las necesidades contables, tributarias o de control interno de su organización.</p>
+      </div>
+      <a 
+        href={`https://wa.me/${siteConfig.phoneClean}?text=${encodeURIComponent("Hola Angela, deseo agendar una consulta estratégica.")}`} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="btn btn-gold banner-action-btn"
+      >
+        Conversar por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-wrap {
+    padding: 90px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .bg-white {
+    background: transparent;
+  }
+
+  .section-h2 {
+    font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    color: var(--color-primary-dark, #163A5F);
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .section-subtitle {
+    max-width: 780px;
+    margin: 0 auto;
+    color: #556677;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  /* Línea dorada animada en el ancho de la página */
+  .services-divider-track {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 3px;
+    margin: 1.4rem auto 2.2rem auto;
+    position: relative;
+    background: rgba(184, 155, 94, 0.15);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .services-divider-bar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #9E7D3B 0%, #DFCA8D 45%, #FFF6D6 52%, #DFCA8D 60%, #B89B5E 100%);
+    background-size: 200% 100%;
+    transform-origin: left center;
+    transform: scaleX(0);
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(223, 202, 141, 0.6);
+    transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
+  }
+
+  :global(.scroll-reveal-section.is-visible) .services-divider-bar {
+    transform: scaleX(1);
+  }
+
+  .resources-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .resources-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .resources-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  .resource-card {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(22, 58, 95, 0.1);
+    border-radius: 12px;
+    padding: 2.2rem 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.2rem;
+    box-shadow: 0 4px 20px -2px rgba(22, 58, 95, 0.05);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #9E7D3B, #DFCA8D, #B89B5E);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  .resource-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px -4px rgba(22, 58, 95, 0.12), 0 0 20px rgba(184, 155, 94, 0.2);
+    border-color: rgba(184, 155, 94, 0.45);
+  }
+
+  .resource-card:hover::before {
+    opacity: 1;
+  }
+
+  .resource-top-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .resource-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(22, 58, 95, 0.06), rgba(184, 155, 94, 0.14));
+    border: 1px solid rgba(184, 155, 94, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B89B5E;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .resource-card:hover .resource-icon-box {
+    transform: scale(1.06);
+    background: linear-gradient(135deg, #163A5F, #244C73);
+    color: #DFCA8D;
+    border-color: #B89B5E;
+  }
+
+  .resource-card-title {
+    font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #163A5F;
+    line-height: 1.3;
+    margin: 0.4rem 0 0.6rem;
+  }
+
+  .resource-card-desc {
+    font-size: 0.88rem;
+    color: #556677;
+    line-height: 1.55;
+    flex-grow: 1;
+  }
+
+  .resource-format-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #8E7238;
+    background: rgba(184, 155, 94, 0.08);
+    border: 1px solid rgba(184, 155, 94, 0.2);
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    margin-top: 0.4rem;
+    width: fit-content;
+  }
+
+  .resource-btn-wrap {
+    margin-top: 1.2rem;
+  }
+
+  .resource-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #163A5F;
+    color: #DFCA8D;
+    border: 1px solid #B89B5E;
+    border-radius: 6px;
+    font-family: var(--font-sans, 'Montserrat', sans-serif);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+  }
+
+  .resource-btn:hover {
+    background: #B89B5E;
+    color: #163A5F;
+    border-color: #B89B5E;
+    box-shadow: 0 4px 14px rgba(184, 155, 94, 0.35);
+    transform: translateY(-2px);
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .badge-gold {
+    background: rgba(184, 155, 94, 0.12);
+    color: #8E7238;
+    border: 1px solid rgba(184, 155, 94, 0.3);
+  }
+
+  /* Banner de Acompañamiento Estratégico al Pie */
+  .resources-consultancy-banner {
+    margin-top: 3.5rem;
+    background: linear-gradient(135deg, #163A5F 0%, #0D263F 100%);
+    border: 1px solid rgba(184, 155, 94, 0.4);
+    border-radius: 12px;
+    padding: 2.2rem 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    box-shadow: 0 16px 40px rgba(22, 58, 95, 0.16);
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (min-width: 900px) {
+    .resources-consultancy-banner {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between;
+      padding: 2.4rem 3rem;
+    }
+  }
+
+  .banner-content h4 {
+    font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+  }
+
+  .banner-content p {
+    color: #B5C9DB;
+    font-size: 0.94rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .banner-action-btn {
+    flex-shrink: 0;
+    padding: 0.85rem 1.8rem;
+    font-size: 0.86rem;
+  }
+</style>
