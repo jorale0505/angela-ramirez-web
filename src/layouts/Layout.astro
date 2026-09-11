@@ -12,66 +12,158 @@ interface Props {
 
 const rawBase = import.meta.env.BASE_URL;
 const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/';
+const fullSiteUrl = "https://jorale0505.github.io/angela-ramirez-web";
+const canonicalHref = `${fullSiteUrl}/`;
 
 const {
-  title = "Angela Ramírez | Contadora Pública · Revisoría Fiscal y Auditoría Forense · Cali",
-  description = "Servicios profesionales de Revisoría Fiscal, Auditoría Forense, Peritaje Contable y Planeación Tributaria en Cali y Colombia. Tu información, en buenas manos.",
+  title = "Contadora Pública en Pereira, Cartago y La Virginia | Angela Ramírez",
+  description = "¿Busca contador o contadora pública en Pereira, Cartago, La Virginia o Risaralda? Revisoría Fiscal, Declaración de Renta, Auditoría y Asesoría Contable sin sanciones DIAN.",
   image = `${baseUrl}logo-ar-3d.png`,
 } = Astro.props;
 
-const siteUrl = Astro.site?.toString() || "https://angelaramirez.github.io";
-const canonicalURL = new URL(Astro.url.pathname, siteUrl);
-
-// Estructura Schema.org para posicionamiento local y profesional
+// Estructura Schema.org completa para Posicionamiento Local (Local SEO)
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Person",
-      "@id": `${siteUrl}/#person`,
-      "name": "Angela Ramírez",
-      "jobTitle": "Contadora Pública y Auditora Forense",
-      "description": "Especialista en Revisoría Fiscal, Auditoría Forense y Peritaje Contable Judicial.",
+      "@id": `${fullSiteUrl}/#person`,
+      "name": "Angela María Ramírez Bedoya",
+      "alternateName": ["Angela Ramírez", "Angela Ramírez Contadora"],
+      "jobTitle": "Contadora Pública, Revisor Fiscal y Auditora Forense",
+      "description": "Contadora Pública con más de una década de experiencia en Revisoría Fiscal, Declaración de Renta, Auditoría Forense y Asesoría Contable en Cartago, Pereira, La Virginia y Risaralda.",
+      "telephone": "+573105274367",
+      "email": "angelaramirez.contabilidad@gmail.com",
+      "url": fullSiteUrl,
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Cali",
-        "addressRegion": "Valle del Cauca",
+        "addressLocality": "Pereira",
+        "addressRegion": "Risaralda",
         "addressCountry": "CO"
       },
-      "telephone": "+573001234567",
-      "email": "contacto@angelaramirezcontadora.com",
-      "url": siteUrl
+      "alumniOf": [
+        "Especialización en Revisoría Fiscal",
+        "Diplomado en Normas Internacionales de Información Financiera NIIF"
+      ],
+      "knowsAbout": [
+        "Revisoría Fiscal",
+        "Declaración de Renta",
+        "Auditoría Financiera",
+        "Auditoría Forense",
+        "Control Interno",
+        "Normas NIIF",
+        "Tributaria Colombiana"
+      ]
     },
     {
-      "@type": "AccountingService",
-      "@id": `${siteUrl}/#organization`,
-      "name": "Angela Ramírez · Revisoría Fiscal & Auditoría Forense",
-      "url": siteUrl,
-      "logo": `${siteUrl}/favicon.svg`,
-      "image": `${siteUrl}${image}`,
-      "telephone": "+573001234567",
+      "@type": ["AccountingService", "ProfessionalService", "LocalBusiness"],
+      "@id": `${fullSiteUrl}/#organization`,
+      "name": "Angela Ramírez · Contadora Pública & Revisoría Fiscal",
+      "alternateName": "Servicios Contables y Revisoría Fiscal Angela Ramírez",
+      "url": fullSiteUrl,
+      "logo": `${fullSiteUrl}/favicon.svg`,
+      "image": `${fullSiteUrl}/angela-portrait.png`,
+      "telephone": "+573105274367",
       "priceRange": "$$",
+      "currenciesAccepted": "COP",
+      "paymentAccepted": "Efectivo, Transferencia Bancaria",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Cali",
-        "addressRegion": "Valle del Cauca",
+        "streetAddress": "Área Metropolitana Centro Occidente & Norte del Valle",
+        "addressLocality": "Pereira",
+        "addressRegion": "Risaralda",
+        "postalCode": "660001",
         "addressCountry": "CO"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "3.4516",
-        "longitude": "-76.5320"
+        "latitude": 4.8133,
+        "longitude": -75.6961
       },
+      "areaServed": [
+        { "@type": "City", "name": "Pereira" },
+        { "@type": "City", "name": "Cartago" },
+        { "@type": "City", "name": "La Virginia" },
+        { "@type": "City", "name": "Dosquebradas" },
+        { "@type": "City", "name": "Santa Rosa de Cabal" },
+        { "@type": "AdministrativeArea", "name": "Risaralda" },
+        { "@type": "AdministrativeArea", "name": "Norte del Valle del Cauca" },
+        { "@type": "AdministrativeArea", "name": "Eje Cafetero" },
+        { "@type": "Country", "name": "Colombia" }
+      ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "08:00",
         "closes": "18:00"
       },
-      "areaServed": [
-        { "@type": "City", "name": "Cali" },
-        { "@type": "State", "name": "Valle del Cauca" },
-        { "@type": "Country", "name": "Colombia" }
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios Contables, Tributarios y de Auditoría",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Revisoría Fiscal y Aseguramiento",
+              "description": "Dictamen de estados financieros con apego a las NIAS y Ley 43 de 1990 en Pereira, Cartago y Risaralda."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Declaraciones de Renta Personas Naturales y Jurídicas",
+              "description": "Preparación técnica, depuración fiscal y presentación oportuna ante la DIAN con cero sanciones."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Auditoría Financiera, Interna y Forense",
+              "description": "Inspección de controles, detección de fraudes y peritaje contable con plena validez judicial."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Asesoría Contable, NIIF y Gestión de Riesgos",
+              "description": "Diagnóstico de control interno, parametrización contable y cumplimiento en Cartago y Pereira."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${fullSiteUrl}/#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Presta servicios de contabilidad y revisoría fiscal en Pereira, Cartago y La Virginia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Angela Ramírez presta servicios profesionales presenciales y remotos de Revisoría Fiscal, Auditoría Financiera, Declaraciones de Renta y Asesoría Contable en Cartago (Valle), Pereira, La Virginia, Dosquebradas y en todo el departamento de Risaralda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo contactar a un contador o contadora pública para declaración de renta en Pereira o Cartago?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puede agendar una consulta directa a través de WhatsApp al +57 310 527 4367. Se realiza un diagnóstico preliminar de ingresos, deducciones y documentación para presentar su declaración de renta sin sanciones ni requerimientos de la DIAN."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué garantía ofrece la revisoría fiscal y auditoría forense con Angela Ramírez?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Más de una década de experiencia intachable, 0 sanciones ante la Junta Central de Contadores (JCC) y la DIAN, y plena admisibilidad probatoria de informes bajo el Código General del Proceso (CGP) y las Normas Internacionales de Auditoría (NIA)."
+          }
+        }
       ]
     }
   ]
@@ -86,28 +178,37 @@ const jsonLd = {
     <link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- SEO Primario -->
+    <!-- SEO Primario para Búsquedas en Google -->
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonicalURL} />
+    <meta name="keywords" content="contador pereira, contadora pereira, contadores pereira, contador cartago, contadora cartago, contadores cartago, contador la virginia, contadora la virginia, contadores risaralda, contadora publica risaralda, revisoria fiscal pereira, declaracion de renta cartago, asesoria contable risaralda, peritaje contable eje cafetero, contador publico norte del valle, auditoria forense pereira" />
+    <link rel="canonical" href={canonicalHref} />
     <meta name="author" content="Angela Ramírez" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Geo Meta Tags para Posicionamiento Local -->
+    <meta name="geo.region" content="CO-RIS" />
+    <meta name="geo.placename" content="Pereira, Risaralda, Cartago, Colombia" />
+    <meta name="geo.position" content="4.8133;-75.6961" />
+    <meta name="ICBM" content="4.8133, -75.6961" />
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:url" content={canonicalHref} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${siteUrl}${image}`} />
+    <meta property="og:image" content={`${fullSiteUrl}/angela-portrait.png`} />
+    <meta property="og:image:alt" content="Angela Ramírez - Contadora Pública en Pereira, Cartago y Risaralda" />
     <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="Angela Ramírez · Contadora Pública" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:url" content={canonicalHref} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={`${siteUrl}${image}`} />
+    <meta property="twitter:image" content={`${fullSiteUrl}/angela-portrait.png`} />
 
     <!-- Google Fonts Oficiales: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

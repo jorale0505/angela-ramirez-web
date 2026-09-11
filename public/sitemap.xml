@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://jorale0505.github.io/angela-ramirez-web/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://jorale0505.github.io/angela-ramirez-web/angela-portrait.png</image:loc>
+      <image:title>Angela Ramírez - Contadora Pública y Revisoría Fiscal en Pereira, Cartago y Risaralda</image:title>
+      <image:caption>Angela María Ramírez Bedoya - Contadora Pública Especialista en Revisoría Fiscal y Auditoría Forense</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://jorale0505.github.io/angela-ramirez-web/logo-ar-3d.png</image:loc>
+      <image:title>Logotipo Angela Ramírez Contadora Pública</image:title>
+    </image:image>
+  </url>
+</urlset>

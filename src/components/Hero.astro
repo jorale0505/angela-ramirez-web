@@ -19,7 +19,7 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
       <div class="logo-3d-halo">
         <img 
           src={`${baseUrl}logo-ar-3d.png`} 
-          alt="Logotipo Oficial 3D de Angela Ramírez · Contadora Pública" 
+          alt="Logotipo Oficial Angela Ramírez · Contadora Pública en Cartago, Pereira y Risaralda" 
           width="135" 
           height="92" 
           class="hero-logo-img"
@@ -42,6 +42,17 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
 
       <!-- Slogan Oficial Centrado -->
       <p class="brand-slogan-text">TU INFORMACIÓN, EN BUENAS MANOS</p>
+
+      <!-- Insignia Geográfica de Cobertura Regional (SEO Local) -->
+      <div class="hero-geo-coverage" aria-label="Cobertura de servicios profesionales">
+        <span class="geo-pin-icon" aria-hidden="true">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </span>
+        <span>Cartago · Pereira · La Virginia · Risaralda</span>
+      </div>
     </div>
 
     <!-- 3. MÓDULO DINÁMICO: Títulos de Servicios con Efecto Máquina de Escribir -->
@@ -267,6 +278,29 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
     text-transform: uppercase;
     text-align: center;
     margin-top: 0.25rem;
+  }
+
+  .hero-geo-coverage {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    margin: 0.55rem auto 0 auto;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(22, 58, 95, 0.03);
+    border: 1px solid rgba(184, 155, 94, 0.25);
+    font-family: var(--font-sans);
+    font-size: clamp(0.68rem, 1vw, 0.78rem);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--color-primary-medium);
+  }
+
+  .geo-pin-icon {
+    color: var(--color-gold-champagne);
+    display: inline-flex;
+    align-items: center;
   }
 
   /* 3. Módulo Dinámico Typewriter Full-Width */

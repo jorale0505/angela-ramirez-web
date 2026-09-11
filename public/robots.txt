@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jorale0505.github.io/angela-ramirez-web/sitemap.xml

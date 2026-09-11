@@ -1,5 +1,5 @@
 // content.ts - Datos institucionales y estructurados para Angela Ramírez
-// Contadora Pública · Revisoría Fiscal & Auditoría Forense · Cali, Colombia
+// Contadora Pública · Revisoría Fiscal & Auditoría Forense · Cartago, Pereira y Risaralda, Colombia
 
 export interface ServiceItem {
   id: string;
@@ -40,22 +40,32 @@ export interface Testimonial {
 
 export const siteConfig = {
   name: "Angela Ramírez",
+  fullName: "Angela María Ramírez Bedoya",
   title: "Contadora Pública",
   specialties: [
     "Especialista en Revisoría Fiscal",
     "Especialista en Auditoría Forense y Peritaje Judicial"
   ],
   slogan: "Tu información, en buenas manos",
-  location: "Eje Cafetero · Norte del Valle",
-  locations: ["Eje Cafetero", "Norte del Valle"],
-  region: "Eje Cafetero y Norte del Valle, Colombia",
-  addressDisplay: "Eje Cafetero · Norte del Valle, Colombia",
+  primaryRegion: "Cartago, Pereira, La Virginia y Risaralda",
+  location: "Cartago · Pereira · La Virginia · Risaralda",
+  locations: ["Cartago", "Pereira", "La Virginia", "Dosquebradas", "Santa Rosa de Cabal", "Risaralda", "Norte del Valle", "Eje Cafetero"],
+  region: "Risaralda, Eje Cafetero y Norte del Valle, Colombia",
+  addressDisplay: "Cartago · Pereira · La Virginia · Risaralda · Eje Cafetero",
   phone: "+57 310 527 4367",
   phoneClean: "573105274367",
   email: "angelaramirez.contabilidad@gmail.com",
   secondaryEmail: "contacto@angelaramirezcontadora.com",
   tpNumber: "",
   whatsappUrl: "https://wa.me/573105274367?text=Hola%20Angela,%20deseo%20agendar%20una%20consulta%20profesional.",
+  seo: {
+    metaTitle: "Contadora Pública en Pereira, Cartago y La Virginia | Angela Ramírez",
+    metaDescription: "¿Busca contador o contadora pública en Pereira, Cartago, La Virginia o Risaralda? Revisoría Fiscal, Declaración de Renta, Auditoría y Asesoría Contable sin sanciones DIAN.",
+    keywords: "contador pereira, contadora pereira, contadores pereira, contador cartago, contadora cartago, contadores cartago, contador la virginia, contadora la virginia, contadores risaralda, contadora publica risaralda, revisoria fiscal pereira, declaracion de renta cartago, asesoria contable risaralda, peritaje contable eje cafetero, contador publico norte del valle, auditoria forense pereira",
+    geoPlacename: "Pereira, Risaralda, Cartago, Colombia",
+    geoPosition: "4.8133;-75.6961",
+    geoRegion: "CO-RIS"
+  }
 };
 
 export const trustHighlights = [
@@ -361,8 +371,8 @@ export const faqs: FAQItem[] = [
   },
   {
     category: "Planeación Tributaria",
-    question: "¿Cómo protege la asesoría tributaria a las empresas en Cali frente al Municipio y la DIAN?",
-    answer: "Cali cuenta con particularidades tributarias como las tarifas de Industria y Comercio (ICA), la sobretasa bomberil y retenciones distritales específicas. Una planeación tributaria adecuada no solo optimiza el impuesto sobre la renta nacional ante la DIAN, sino que evita sanciones y fiscalizaciones del Departamento Administrativo de Hacienda de Santiago de Cali."
+    question: "¿Cómo protege la asesoría tributaria a las empresas en Pereira y Cartago frente a los Municipios y la DIAN?",
+    answer: "Pereira, Cartago y los municipios de Risaralda cuentan con particularidades tributarias locales como las tarifas de Industria y Comercio (ICA), retenciones y sobretasas municipales específicas. Una planeación tributaria adecuada no solo optimiza el impuesto sobre la renta nacional ante la DIAN, sino que evita sanciones y fiscalizaciones de las Secretarías de Hacienda municipales."
   }
 ];
 
@@ -371,8 +381,8 @@ export const testimonials: Testimonial[] = [
     quote: "La rigurosidad de Angela en nuestra Revisoría Fiscal nos dio la tranquilidad que necesitábamos ante la Junta Directiva y la Superintendencia. Su visión estratégica va mucho más allá de firmar balances: identifica riesgos antes de que se conviertan en pérdidas.",
     author: "Carlos E. Montaño",
     role: "Presidente de Junta Directiva",
-    organization: "Grupo Logístico del Pacífico S.A.S.",
-    city: "Cali, Colombia",
+    organization: "Grupo Logístico del Café S.A.S.",
+    city: "Pereira, Colombia",
     serviceCategory: "Revisoría Fiscal"
   },
   {
@@ -380,15 +390,15 @@ export const testimonials: Testimonial[] = [
     author: "Dra. Patricia Arana V.",
     role: "Socia Directora de Litigios Comerciales",
     organization: "Arana & Asociados Abogados",
-    city: "Cali, Colombia",
+    city: "Cartago, Colombia",
     serviceCategory: "Peritaje Contable Judicial"
   },
   {
     quote: "Cuando detectamos inconsistencias operativas en tesorería, Angela lideró la investigación forense con máxima discreción, asegurando la evidencia con una cadena de custodia impecable que permitió recuperar los recursos y reestructurar nuestros controles internos.",
     author: "Andrés Felipe Valencia",
     role: "Gerente General",
-    organization: "Distribuidora Industrial del Valle",
-    city: "Yumbo / Cali, Colombia",
+    organization: "Distribuidora Agroindustrial del Eje",
+    city: "La Virginia / Pereira, Colombia",
     serviceCategory: "Auditoría Forense"
   }
 ];
@@ -442,7 +452,7 @@ export const freeResourcesData: FreeResourceItem[] = [
     id: "calendario-2026",
     badge: "ACTUALIZADO 2026",
     title: "Calendario Tributario 2026",
-    description: "Cronograma consolidado de vencimientos DIAN y distritales (Renta PN y PJ, IVA, Retención en la fuente e ICA en Cali, Medellín y Bogotá) para evitar sanciones y extemporaneidades.",
+    description: "Cronograma consolidado de vencimientos DIAN y municipales (Renta PN y PJ, IVA, Retención en la fuente e ICA en Pereira, Cartago, La Virginia y Dosquebradas) para evitar sanciones y extemporaneidades.",
     formatText: "PDF Interactivo · Descarga Inmediata",
     buttonText: "Descargar Calendario",
     whatsappMessage: "Hola Angela, deseo obtener el Calendario Tributario 2026.",
@@ -477,6 +487,30 @@ export const freeResourcesData: FreeResourceItem[] = [
     buttonText: "Obtener Checklist",
     whatsappMessage: "Hola Angela, deseo el Checklist Documental para Declaración de Renta.",
     iconType: "checklist"
+  }
+];
+
+export interface LocalFAQ {
+  question: string;
+  answer: string;
+}
+
+export const localFaqs: LocalFAQ[] = [
+  {
+    question: "¿Presta servicios de contabilidad y revisoría fiscal en Pereira, Cartago y La Virginia?",
+    answer: "Sí. Angela Ramírez presta servicios profesionales presenciales y remotos de Revisoría Fiscal, Auditoría Financiera, Declaraciones de Renta y Asesoría Contable en Cartago (Valle), Pereira, La Virginia, Dosquebradas y en todo el departamento de Risaralda."
+  },
+  {
+    question: "¿Cómo contactar a un contador o contadora pública para declaración de renta en Pereira o Cartago?",
+    answer: "Puede agendar una consulta directa a través de WhatsApp al +57 310 527 4367. Se realiza un diagnóstico preliminar de ingresos, deducciones y documentación para presentar su declaración de renta sin sanciones ni requerimientos de la DIAN."
+  },
+  {
+    question: "¿Qué garantía ofrece la revisoría fiscal y auditoría forense con Angela Ramírez?",
+    answer: "Más de una década de experiencia intachable, 0 sanciones ante la Junta Central de Contadores (JCC) y la DIAN, y plena admisibilidad probatoria de informes bajo el Código General del Proceso (CGP) y las Normas Internacionales de Auditoría (NIA)."
+  },
+  {
+    question: "¿Atiende personas naturales comerciantes y empresas pymes en Risaralda y Norte del Valle?",
+    answer: "Sí. El acompañamiento está diseñado para personas naturales, comerciantes, profesionales independientes, y pequeñas y medianas empresas (Pymes) en régimen ordinario y Régimen Simple de Tributación (RST)."
   }
 ];
 
