@@ -25,7 +25,7 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
     <div class="about-grid-main">
       
       <!-- Columna Izquierda: Tarjeta Editorial Sticky con Foto Real y Títulos de Estudio -->
-      <div class="about-sidebar-sticky">
+      <div class="about-sticky-sidebar">
         <div class="about-profile-card reveal-left">
           
           <!-- Foto de Perfil con Halo Dorado -->
@@ -177,7 +177,7 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
     z-index: 1;
     padding: clamp(4.5rem, 8vh, 7rem) 0;
     background: transparent;
-    overflow-x: clip;
+    overflow: visible;
   }
 
   /* Animación al Scroll Progresiva */
@@ -190,7 +190,8 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
 
   .scroll-reveal-section.is-visible {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: none;
+    will-change: auto;
   }
 
   .reveal-left {
@@ -230,7 +231,7 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
   .about-main-title {
     display: inline-block;
     text-align: center;
-    font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+    font-family: var(--font-serif, 'Georgia', serif);
     font-size: clamp(2.2rem, 3.6vw, 3.4rem);
     font-weight: 700;
     color: var(--color-primary-dark);
@@ -299,13 +300,16 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
   }
 
   /* Columna Izquierda: Contenedor Sticky y Tarjeta de Perfil */
-  .about-sticky-sidebar {
+  .about-sticky-sidebar,
+  .about-sidebar-sticky {
     position: relative;
     width: 100%;
   }
 
   @media (min-width: 992px) {
-    .about-sticky-sidebar {
+    .about-sticky-sidebar,
+    .about-sidebar-sticky {
+      position: -webkit-sticky;
       position: sticky;
       top: 96px;
       align-self: start;
@@ -364,7 +368,7 @@ const baseUrl = rawBase ? (rawBase.endsWith('/') ? rawBase : `${rawBase}/`) : '/
   }
 
   .profile-card-name {
-    font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
+    font-family: var(--font-serif, 'Georgia', serif);
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--color-primary-dark);
